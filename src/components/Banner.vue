@@ -1,29 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
-// import HelloWorld from "./HelloWorld.vue";
-
-const activeLink = ref(0);
-
-const navLinks = [
-  { label: "HOME", key: "index.html" },
-  { label: "ABOUT", key: "#about" },
-  { label: "SERVICES" },
-  { label: "PROJECT" },
-  { label: "PHOTOGRAPHY" },
-  { label: "VIDEO EDITING" },
-  { label: "CONTACT" },
-  { label: "CV" },
-];
-
 const title = "I am Mustak Ahmed";
-const cvLink = "img/myself/Mustak_Ahmed.pdf";
-
-const setActive = (index) => {
-  activeLink.value = index;
-};
-
 // text type
-
 const textsToType = ["Hello, World!", "Vue.js is awesome!", "Coding is fun!"];
 const typingSpeed = 100;
 
@@ -76,44 +54,15 @@ function eraseText() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-light py-3">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
-            <a
-              :href="link.key"
-              class="nav-link"
-              :class="{ active: activeLink === index }"
-              @click="setActive(index)"
-            >
-              {{ link.label }}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- banner area Start -->
-  <!-- <div id="home" class="intro route bg-image">
+  <div>
+    <div class="header">
+         <div id="home" class="intro route bg-image">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
-      <div class="table-cell">
+      <div class="table-cell  inner-header flex">
         <div class="container">
           <h1 class="intro-title mb-4">{{ title }}</h1>
-          <div style="height: 100px">
+          <div style="height: 70px">
             <h1>{{ typedText }}</h1>
           </div>
 
@@ -126,46 +75,132 @@ function eraseText() {
         </div>
       </div>
     </div>
-  </div> -->
-  <!-- banner area End -->
-  <!-- <HelloWorld /> -->
+  </div>
+        <!-- <div class="inner-header flex">
+       
+        <h1>{{title}}</h1>
+        </div> -->
+        
+        <!--Waves Container-->
+        <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+        </div>
+        <!--Waves end-->
+        
+        </div>
+        <!--Header ends-->
+  </div>
 </template>
 
+
 <style scoped>
-.navbar-nav .nav-link {
-  padding: 0.5rem 1rem;
-  position: relative;
-  overflow: hidden; /* Hide the initial position of the line */
+
+h1 {
+  font-family: 'Dancing Script', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
 }
 
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; /* Initially, the line has zero width */
-  height: 2px;
-  background-color: #007bff; /* Set your hover line color */
-  transition: width 0.3s ease; /* Add transition effect for width */
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgb(54, 218, 204) 0%, rgb(8, 88, 98) 100%);
+  color:white;
 }
 
-.navbar-nav .nav-link:hover::after {
-  width: 100%; /* Expand the line to 100% on hover */
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link.active {
-  color: #007bff; /* Set your active link color */
-  font-weight: bold;
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-/* .bg-image {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center center;
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
 }
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+
 
 .display-table {
   width: 100%;
@@ -179,7 +214,7 @@ function eraseText() {
 }
 
 .intro {
-  height: 100vh;
+  height: 75vh;
   position: relative;
   color: #fff;
 }
@@ -189,16 +224,6 @@ function eraseText() {
   position: absolute;
 }
 
-.intro .overlay-itro {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-}
 
 .intro .intro-title {
   color: #fff;
@@ -216,9 +241,6 @@ function eraseText() {
   display: none;
 }
 
-#home {
-  background-image: url(../assets/banner.jpg);
-}
 
 .intro .text-slider {
   display: inline-block;
@@ -249,5 +271,5 @@ function eraseText() {
   100% {
     transform: translateY(0);
   }
-} */
+}
 </style>
