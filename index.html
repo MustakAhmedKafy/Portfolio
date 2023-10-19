@@ -9,10 +9,18 @@
     html {
       scroll-behavior: smooth;
     }
+
+    @media (max-width: 767px) {
+
+      /* Adjust the max-width as needed for your design */
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>

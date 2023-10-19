@@ -1,14 +1,15 @@
 <script setup>
-import NavTab from './components/NavTab.vue'
+import Navbar from './components/Navbar.vue'
 import Banner from './components/Banner.vue'
-
-
-// import HelloWorld from './components/HelloWorld.vue'
+import About from './components/About.vue'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-<NavTab/>
-<!-- <HelloWorld /> -->
+<Navbar/>
+
 <Banner />
+<About />
+<HelloWorld />
 </template>
 

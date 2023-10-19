@@ -2,16 +2,17 @@
 import { ref, onMounted } from "vue";
 // import HelloWorld from "./HelloWorld.vue";
 
+
 const activeLink = ref(0);
 
 const navLinks = [
-  { label: "HOME", key: "index.html" },
-  { label: "ABOUT", key: "#about" },
-  { label: "SERVICES" },
-  { label: "PROJECT" },
-  { label: "PHOTOGRAPHY" },
-  { label: "VIDEO EDITING" },
-  { label: "CONTACT" },
+  { label: "Home", key: "index.html" },
+  { label: "About", key: "#about" },
+  { label: "Services", key: "#services" },
+  { label: "Project" },
+  { label: "Photography" },
+  { label: "Video Editing" },
+  { label: "Contact" },
   { label: "CV" },
 ];
 
@@ -76,21 +77,13 @@ function eraseText() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-light py-3">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
             <a
@@ -104,8 +97,8 @@ function eraseText() {
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+  </div>
+</nav>
   <!-- banner area Start -->
   <!-- <div id="home" class="intro route bg-image">
     <div class="overlay-itro"></div>
@@ -135,7 +128,6 @@ function eraseText() {
 .navbar-nav .nav-link {
   padding: 0.5rem 1rem;
   position: relative;
-  overflow: hidden; /* Hide the initial position of the line */
 }
 
 .navbar-nav .nav-link::after {
@@ -145,18 +137,19 @@ function eraseText() {
   bottom: 0;
   width: 0; /* Initially, the line has zero width */
   height: 2px;
-  background-color: #007bff; /* Set your hover line color */
+  background-color: #007bff; /* Set your line color */
   transition: width 0.3s ease; /* Add transition effect for width */
 }
 
-.navbar-nav .nav-link:hover::after {
-  width: 100%; /* Expand the line to 100% on hover */
+.navbar-nav .nav-link.active::after {
+  width: 100%; /* Expand the line to 100% for the active link */
 }
 
 .nav-link.active {
   color: #007bff; /* Set your active link color */
   font-weight: bold;
 }
+
 /* .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
