@@ -94,8 +94,16 @@ function eraseText() {
             >
               {{ link.label }}
             </a>
+            
           </li>
+           <!-- <a :href="cvLink" download>
+            <button type="button" class="btn btn-primary mt-3">
+             Online Resume
+              <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </a> -->
         </ul>
+        
       </div>
   </div>
 </nav>
