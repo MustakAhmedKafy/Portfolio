@@ -1,129 +1,165 @@
-<template>
- <section class="my-skill container">
-     <body>
-  <div class="container">
-    <h2 class="my-skills">My Skills</h2>
-    <div class="bar-1">
-    <div class="title">HTML5</div>
-    <div class="bar" data-width="65%">
-      <div class="bar-inner">
-        
-      </div>
-      <div class="bar-percent">65%</div>
-    </div>
-    </div>
-    <div class="bar-1">
-    <div class="title" style="color: #084c61;">CSS3</div>
-    <div class="bar" data-width="85%">
-      <div class="bar-inner" style="background: #084c61;">
-        
-      </div>
-      <div class="bar-percent">85%</div>
-    </div>
-    
-    </div>
-    <div class="bar-1">
-    <div class="title" style="color: #525252;">Javascript</div>
-    <div class="bar" data-width="95%">
-      <div class="bar-inner" style="background: #525252;">
-        
-      </div>
-      <div class="bar-percent">95%</div>
-    </div>
-    </div>
-    <div class="bar-1">
-    <div class="title" style="color: #5a68a5">jQuery</div>
-    <div class="bar" data-width="75%">
-      <div class="bar-inner" style="background: #5a68a5;">
-        
-      </div>
-      <div class="bar-percent">75%</div>
-    </div>
-    </div>
-  </div>
-  
-</body>
-    </section>
-</template>
-
-
 <script setup>
-var bars = document.querySelectorAll(".bar");
-
-bars.forEach(function(bar) {
-  var barInner = bar.querySelector(".bar-inner");
-  var dataWidth = bar.getAttribute("data-width");
-  
-  animateWidth(barInner, dataWidth, 2000);
-});
-
-function animateWidth(element, targetWidth, duration) {
-  var startWidth = parseFloat(element.style.width) || 0;
-  var startTime = null;
-
-  function animationStep(timestamp) {
-    if (!startTime) startTime = timestamp;
-
-    var progress = timestamp - startTime;
-    var percentage = Math.min(progress / duration, 1);
-    var currentWidth = startWidth + percentage * (parseFloat(targetWidth) - startWidth);
-
-    element.style.width = currentWidth + "%";
-
-    if (percentage < 1) {
-      requestAnimationFrame(animationStep);
-    }
-  }
-
-  requestAnimationFrame(animationStep);
-}
-
 
 </script>
 
+<template>
 
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="progress blue">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+            </div>
+          kkk
+        </div>
+</div>
+</div>
+</template>
 
-
-
-
-
-
-<style>
-
-
-.title {
-  font-weight: bold;
-  font-size: 20px;
-  color: #db3a34;
+<style scoped>
+.progress{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.progress:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress .progress-left{
+    left: 0;
+}
+.progress .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progress .progress-right{
+    right: 0;
+}
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 24px;
+    color: #d10b4f;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progress.blue .progress-bar{
+    border-color: #d10b4f;
+}
+.progress.blue .progress-left .progress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
 }
 
-.bar {
-  width: 90%;
-  height: 35px;
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  transition: all 2s linear;
+
+
+
+
+
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+@keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+@media only screen and (max-width: 990px){
+    .progress{ margin-bottom: 20px; }
 }
 
-.bar-1,
-.my-skills {
-  width: 80%;
-  margin: 10px auto 25px;
-}
-
-.bar-inner {
-  width: 0;
-  height: 35px;
-  line-height: 35px;
-  background: #db3a34;
-  border-radius: 5px 0 0 5px;
-}
-
-.bar-percent {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 18px;
-}
 </style>
