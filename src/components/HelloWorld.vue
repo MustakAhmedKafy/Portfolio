@@ -1,165 +1,207 @@
-<script setup>
-
-</script>
-
+<!-- ProgressBar.vue -->
 <template>
+<!-- HTML Progress Bar -->
+<div class="skill-progress-bar">
+  <div class="container">
+  <div class="row">
+<div class="col-md-4">
+  <div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">80</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">HTML</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<defs>
+				<linearGradient id="gradientStyle">
+					<stop offset="0%" stop-color="#565656" />
+					<stop offset="100%" stop-color="#b7b5b5" />
+				</linearGradient>
+			</defs>
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+	</div>
+</div>
+<div class="col-md-4">
+  	<div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">100</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">CSS</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+	</div>
+</div>
+<div class="col-md-4">
+  	<div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">35</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">JS</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+</div>
+</div>
 
-    
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="progress blue">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">90%</div>
-            </div>
-          kkk
-        </div>
+</div>
+
 </div>
 </div>
 </template>
 
+<script setup>
+document.addEventListener('DOMContentLoaded', function() {
+  var blocks = document.querySelectorAll('.block');
+
+  function animateBlock(block) {
+    var numElement = block.querySelector('.num');
+    var num = parseInt(numElement.innerText);
+    var count = 0;
+    var time = 2000 / num;
+    var circle = block.querySelector('.circle');
+
+    var intervalId = setInterval(function() {
+      if (count === num) {
+        clearInterval(intervalId);
+      } else {
+        count += 1;
+        numElement.innerText = count;
+      }
+    }, time);
+
+    circle.style.strokeDashoffset = 503 - (503 * (num / 100));
+
+    var dots = block.querySelector('.dots');
+    dots.style.transform = 'rotate(' + 360 * (num / 100) + 'deg)';
+
+    if (num === 100) {
+      dots.style.opacity = 0;
+    }
+  }
+
+  window.addEventListener('load', function() {
+    blocks.forEach(function(block) {
+      animateBlock(block);
+    });
+  });
+});
+
+
+</script>
+
 <style scoped>
-.progress{
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
-    background: none;
-    margin: 0 auto;
-    box-shadow: none;
-    position: relative;
+
+.skill-progress-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 20px;
+	background-color: #292929;
 }
-.progress:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 12px solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.progress > span{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-.progress .progress-left{
-    left: 0;
-}
-.progress .progress-bar{
-    width: 100%;
-    height: 100%;
-    background: none;
-    border-width: 12px;
-    border-style: solid;
-    position: absolute;
-    top: 0;
-}
-.progress .progress-left .progress-bar{
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-}
-.progress .progress-right{
-    right: 0;
-}
-.progress .progress-right .progress-bar{
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-    -webkit-transform-origin: center right;
-    transform-origin: center right;
-    animation: loading-1 1.8s linear forwards;
-}
-.progress .progress-value{
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    background: #ffffff;
-    font-size: 24px;
-    color: #d10b4f;
-    line-height: 135px;
-    text-align: center;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-}
-.progress.blue .progress-bar{
-    border-color: #d10b4f;
-}
-.progress.blue .progress-left .progress-bar{
-    animation: loading-2 1.5s linear forwards 1.8s;
+.block {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
 }
 
-
-
-
-
-
-@keyframes loading-1{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
+.box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: calc(100% - 50px);
+	height: calc(100% - 50px);
+	border-radius: 50%;
+	background-color: #292929;
+	box-shadow: 0 0 5px 3px #222121;
 }
-@keyframes loading-2{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(144deg);
-        transform: rotate(144deg);
-    }
+
+.box::before {
+	position: absolute;
+	content: '';
+	width: calc(100% + 28px);
+	height: calc(100% + 28px);
+	border-radius: 50%;
+	border: 1px solid #353535;
 }
-@keyframes loading-3{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
+
+.box .number span {
+	color: #e9e9e9;
 }
-@keyframes loading-4{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(36deg);
-        transform: rotate(36deg);
-    }
+
+.box .number .num {
+	font-size: 35px;
+	font-weight: bold;
 }
-@keyframes loading-5{
-    0%{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(126deg);
-        transform: rotate(126deg);
-    }
+
+.box .number .sub {
+	font-size: 20px;
 }
-@media only screen and (max-width: 990px){
-    .progress{ margin-bottom: 20px; }
+
+.box .title {
+	font-size: 15px;
+	color: #9b9b9b;
+}
+
+.dots {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: 2s transform, 2s opacity ease;
+}
+
+.dots::after {
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	top: 5px;
+	left: 50%;
+	border-radius: 50%;
+	background-color: #b7b5b5;
+	box-shadow: 0 0 5px 2px #585858;
+	transform: translateX(-50%);
+}
+
+.svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	fill: none;
+	transform: rotate(-90deg);
+}
+
+.circle {
+	stroke: url(#gradientStyle);
+	stroke-width: 4px;
+	stroke-dasharray: 503;
+	stroke-dashoffset: 503;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	transition: 2s stroke-dashoffset;
 }
 
 </style>

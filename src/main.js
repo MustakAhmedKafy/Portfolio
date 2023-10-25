@@ -7,4 +7,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
+//  window.$ = require("jquery");
+//  window.JQuery = require("jquery");
+
 createApp(App).mount("#app");
