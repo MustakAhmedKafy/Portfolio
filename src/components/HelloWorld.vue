@@ -4,11 +4,11 @@
 <div class="skill-progress-bar">
   <div class="container">
   <div class="row">
-<div class="col-md-4">
+<div class="col-lg-2 col-sm-4 col-6">
   <div class="block">
 		<div class="box">
 			<p class="number">
-				<span class="num">80</span>
+				<span class="num">95</span>
 				<span class="sub">%</span>
 			</p>
 			<p class="title">HTML</p>
@@ -25,11 +25,11 @@
 		</svg>
 	</div>
 </div>
-<div class="col-md-4">
+<div class="col-lg-2 col-sm-4 col-6">
   	<div class="block">
 		<div class="box">
 			<p class="number">
-				<span class="num">100</span>
+				<span class="num">95</span>
 				<span class="sub">%</span>
 			</p>
 			<p class="title">CSS</p>
@@ -40,11 +40,11 @@
 		</svg>
 	</div>
 </div>
-<div class="col-md-4">
+<div class="col-lg-2 col-sm-4 col-6">
   	<div class="block">
 		<div class="box">
 			<p class="number">
-				<span class="num">35</span>
+				<span class="num">75</span>
 				<span class="sub">%</span>
 			</p>
 			<p class="title">JS</p>
@@ -55,7 +55,51 @@
 		</svg>
 </div>
 </div>
-
+<div class="col-lg-2 col-sm-4 col-6">
+  	<div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">70</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">Vue</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+</div>
+</div>
+<div class="col-lg-2 col-sm-4 col-6">
+  	<div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">70</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">Vue</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+</div>
+</div>
+<div class="col-lg-2 col-sm-4 col-6">
+  	<div class="block">
+		<div class="box">
+			<p class="number">
+				<span class="num">70</span>
+				<span class="sub">%</span>
+			</p>
+			<p class="title">Vue</p>
+		</div>
+		<span class="dots"></span>
+		<svg class="svg">
+			<circle class="circle" cx="90" cy="90" r="80" />
+		</svg>
+</div>
+</div>
 </div>
 
 </div>
@@ -103,7 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style scoped>
-
+.col-md-2{
+	display: flex;
+	justify-content: center;
+}
 .skill-progress-bar {
 	display: flex;
 	align-items: center;

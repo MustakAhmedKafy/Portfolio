@@ -2,12 +2,12 @@
 import { ref, onMounted } from "vue";
 // import HelloWorld from "./HelloWorld.vue";
 
-
 const activeLink = ref(0);
 
 const navLinks = [
   { label: "Home", key: "index.html" },
   { label: "About", key: "#about" },
+  { label: "Skill", key: "#mySkill" },
   { label: "Services", key: "#services" },
   { label: "Project" },
   { label: "Photography" },
@@ -78,12 +78,20 @@ function eraseText() {
 
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
             <a
@@ -91,22 +99,21 @@ function eraseText() {
               class="nav-link"
               :class="{ active: activeLink === index }"
               @click="setActive(index)"
+              
             >
               {{ link.label }}
             </a>
-            
           </li>
-           <!-- <a :href="cvLink" download>
+          <!-- <a :href="cvLink" download>
             <button type="button" class="btn btn-primary mt-3">
              Online Resume
               <i class="fa fa-download" aria-hidden="true"></i>
             </button>
           </a> -->
         </ul>
-        
       </div>
-  </div>
-</nav>
+    </div>
+  </nav>
   <!-- banner area Start -->
   <!-- <div id="home" class="intro route bg-image">
     <div class="overlay-itro"></div>

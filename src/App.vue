@@ -2,7 +2,8 @@
 import Navbar from './components/Navbar.vue'
 import Banner from './components/Banner.vue'
 import About from './components/About.vue'
-import HelloWorld from './components/HelloWorld.vue'
+
+import MySkill from './components/MySkill.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <Banner />
 <About />
-<HelloWorld />
+<MySkill />
+<!-- <HelloWorld /> -->
 </template>
 
