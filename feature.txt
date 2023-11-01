@@ -1,2 +1,3 @@
 html resume
 timeline
+always animated icon

@@ -144,6 +144,13 @@ function eraseText() {
   padding: 0.5rem 1rem;
   position: relative;
 }
+.nav-link{
+  padding: 0px!important;
+  padding-bottom: 3px!important;
+}
+.nav-item{
+  padding: 0px 10px;
+}
 
 .navbar-nav .nav-link::after {
   content: "";
