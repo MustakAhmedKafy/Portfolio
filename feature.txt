@@ -1,3 +1,4 @@
 html resume
 timeline
 always animated icon
+font color gray and opacity

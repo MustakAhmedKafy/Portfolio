@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 const title = "I am Mustak Ahmed";
 // text type
-const textsToType = ["Hello, World!", "Vue.js is awesome!", "Coding is fun!"];
+const textsToType = ["Frontend Developer", "Web Designer", "Photographer", "Content Creator"];
 const typingSpeed = 100;
 
 let textIndex = 0;
@@ -63,11 +63,11 @@ function eraseText() {
         <div class="container">
           <h1 class="intro-title mb-4">{{ title }}</h1>
           <div style="height: 70px">
-            <h1>{{ typedText }}</h1>
+            <h2>{{ typedText }}</h2>
           </div>
 
           <a :href="cvLink" download>
-            <button type="button" class="btn btn-primary mt-3">
+            <button type="button" class="btn btn-light  mt-3">
               Download CV
               <i class="fa fa-download" aria-hidden="true"></i>
             </button>

@@ -7,7 +7,7 @@ const activeLink = ref(0);
 const navLinks = [
   { label: "Home", key: "index.html" },
   { label: "About", key: "#about" },
-  { label: "Skill", key: "#mySkill" },
+  { label: "Skill", key: "#myskill" },
   { label: "Services", key: "#services" },
   { label: "Project" },
   { label: "Photography" },
@@ -78,8 +78,8 @@ function eraseText() {
 
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand" href="#">MustaKafy</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -99,17 +99,10 @@ function eraseText() {
               class="nav-link"
               :class="{ active: activeLink === index }"
               @click="setActive(index)"
-              
             >
               {{ link.label }}
             </a>
           </li>
-          <!-- <a :href="cvLink" download>
-            <button type="button" class="btn btn-primary mt-3">
-             Online Resume
-              <i class="fa fa-download" aria-hidden="true"></i>
-            </button>
-          </a> -->
         </ul>
       </div>
     </div>
@@ -143,12 +136,13 @@ function eraseText() {
 .navbar-nav .nav-link {
   padding: 0.5rem 1rem;
   position: relative;
+  font-size: 17px;
 }
-.nav-link{
-  padding: 0px!important;
-  padding-bottom: 3px!important;
+.nav-link {
+  padding: 0px !important;
+  padding-bottom: 3px !important;
 }
-.nav-item{
+.nav-item {
   padding: 0px 10px;
 }
 

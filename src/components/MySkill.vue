@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <section class="skill pt-5" id="mySkill ">
+  <section class="skill py-5" id="myskill ">
     <div class="container">
-      <h2 class="text-center text-uppercase text-white">My Skill</h2>
+      <h2 class="text-center text-uppercase">My Skill</h2>
       <div class="hr-line"></div>
       <div class="row">
         <div class="col-lg-2 col-md-4 col-6 mt-3 ">
@@ -78,6 +78,7 @@
             <h6 class="mt-2">MySQL</h6>
           </div>
         </div>
+       
         <div class="col-lg-2 col-md-4 col-6 mt-3">
           <div class="text-center p-3 border rounded bg-light shadow">
             <img src="../skill_icon/git.png" alt="" />
@@ -86,8 +87,14 @@
         </div>
         <div class="col-lg-2 col-md-4 col-6 mt-3">
           <div class="text-center p-3 border rounded bg-light shadow">
-            <img src="../skill_icon/MSoffice.png" alt="" />
+            <img src="../skill_icon/github.png" alt="" />
             <h6 class="mt-2">GitHub</h6>
+          </div>
+        </div>
+         <div class="col-lg-2 col-md-4 col-6 mt-3">
+          <div class="text-center p-3 border rounded bg-light shadow">
+            <img src="../skill_icon/MSoffice.png" alt="" />
+            <h6 class="mt-2">MS Office</h6>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 col-6 mt-3">
@@ -96,6 +103,7 @@
             <h6 class="mt-2">Video Editing</h6>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
@@ -106,10 +114,11 @@
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.8)!important;
 }
 .skill{
-  background-color: #0d676f;
+  background-color: rgba(242, 242, 242, 5);
 }
 .skill img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
 }
 </style>
