@@ -2,24 +2,47 @@
 import { ref } from 'vue';
 
 
-    const title = ref('Exclusive Services');
+    const title = ref('Provided Solutions');
     const description = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et.');
 
-    const services = ref([
-      { title: 'Frontend Development', icon: 'bi bi-code-slash', description: 'Crafting seamless user experiences with expert front-end development solutions.' },
-      { title: 'Web Design', icon: 'fab fa-asymmetrik', description: 'Innovative web design solutions for captivating online experiences.' },
-      { title: 'Responsive Design', icon: 'fab fa-artstation', description: 'Creating seamless and engaging experiences across all devices.' },
-      { title: 'Clean Coding', icon: '', description: 'Delivering high-quality code for efficient and maintainable websites' },
-      { title: 'Problem Solving', icon: 'fas fa-chart-pie', description: 'Solving complex issues with innovative solutions and expertise.' },
-      { title: 'Video Editing', icon: 'fas fa-laptop-code', description: 'Transforming your footage into stunning visual narratives with precision' },
-    ]);
-
+const services = ref([
+  {
+    icon: 'bi bi-code-slash',
+    title: 'Frontend Development',
+    description: 'Crafting seamless user experiences with expert front-end development solutions.',
+  },
+  {
+    icon: 'fa-brands fa-html5',// Correct icon class for HTML5
+    title: 'Web Design',
+    description: 'Innovative web design solutions for captivating online experiences.',
+  },
+  {
+    icon: 'fas fa-laptop-code',// Correct FontAwesome icon class for laptop-code
+    title: 'Responsive Design',
+    description: 'Creating seamless and engaging experiences across all devices.',
+  },
+  {
+    icon: 'bi bi-file-earmark-code-fill',
+    title: 'Clean Coding',
+    description: 'Delivering high-quality code for efficient and maintainable websites.',
+  },
+  {
+    icon: 'bi bi-bug',
+    title: 'Problem Solving',
+    description: 'Solving complex issues with innovative solutions and expertise.',
+  },
+  {
+    icon: 'bi bi-camera-reels',
+    title: 'Video Editing',
+    description: 'Transforming your footage into stunning visual narratives with precision.',
+  },
+]);
 
 
 </script>
 
 <template>
-  <section class="section-services">
+  <section class="section-services py-5" id="services">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">
@@ -36,6 +59,7 @@ import { ref } from 'vue';
             <div class="content">
               <span class="icon">
                 <i :class="service.icon"></i>
+                <!-- <img src="../assets/icons8-developer-48.png" alt=""> -->
               </span>
               <h3 class="title">{{ service.title }}</h3>
               <p class="description">{{ service.description }}</p>
@@ -49,70 +73,9 @@ import { ref } from 'vue';
   </section>
 </template>
 
-
 <style scoped>
-p,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
 
-.section-services {
-  font-family: "Poppins", sans-serif;
-  background-color: #e6edf7;
-  color: #202020;
-  padding-top: 115px;
-  padding-bottom: 120px;
-}
 
-.section-services .header-section {
-  margin-bottom: 34px;
-}
-
-.section-services .header-section .title {
-  position: relative;
-  padding-bottom: 14px;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.section-services .header-section .title:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background-color: #ff4500;
-  border-radius: 3px;
-}
-
-.section-services .header-section .title:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(30px);
-  width: 10px;
-  height: 3px;
-  background-color: #504f93;
-  border-radius: 3px;
-}
-
-.section-services .header-section .description {
-  font-size: 14px;
-  color: #282828;
-}
 
 .section-services .single-service {
   position: relative;
@@ -135,10 +98,10 @@ li {
   transform: translate(40%, -40%);
   width: 150px;
   height: 150px;
-  background-color: #ff4500;
-  border: 6px solid #504f93;
+  background-color: #0F6D73;
+  border: 6px solid #a6a6a6;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 10;
   transition: all 0.6s;
 }
@@ -157,7 +120,7 @@ li {
   margin-bottom: 26px;
   width: 70px;
   height: 70px;
-  background-color: #ff4500;
+  background-color: #0F6D73;
   border-radius: 5px;
   line-height: 70px;
   text-align: center;
@@ -168,7 +131,7 @@ li {
 
 .section-services .single-service:hover .icon {
   background-color: #fff;
-  color: #ff4500;
+  color: #0F6D73;
 }
 
 .section-services .single-service .title {
@@ -212,7 +175,7 @@ li {
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #ff4500;
+  background-color: #0F6D73;
   transition: background-color 0.3s;
 }
 

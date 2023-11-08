@@ -7,7 +7,7 @@ const activeLink = ref(0);
 const navLinks = [
   { label: "Home", key: "index.html" },
   { label: "About", key: "#about" },
-  { label: "Skill", key: "#myskill" },
+  { label: "Skill", key: "#skill" },
   { label: "Services", key: "#services" },
   { label: "Project" },
   { label: "Photography" },
