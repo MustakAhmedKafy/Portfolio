@@ -1,7 +1,13 @@
 <template>
   <section class="about py-5" id="about">
-    <h2 class="text-center text-uppercase">About</h2>
-    <div class="hr-line"></div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="header-section">
+          <h2 class="title">{{ title }}</h2>
+          <p class="description">{{ description }}</p>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-6 mt-5">
@@ -17,8 +23,7 @@
             <div class="col-sm-12 col-md-6 col-lg-6 my-auto">
               <div class="tab-margin">
                 <p>
-                  <i class="bi bi-person-fill"></i
-                  ><span>{{ name }}</span>
+                  <i class="bi bi-person-fill"></i><span>{{ name }}</span>
                 </p>
                 <p>
                   <!-- <img src="../assets/code.png" alt="" > -->
@@ -30,12 +35,10 @@
                   ><span>{{ email }}</span>
                 </p>
                 <p>
-                  <i class="bi bi-telephone-fill"></i
-                  ><span>{{ phone }}</span>
+                  <i class="bi bi-telephone-fill"></i><span>{{ phone }}</span>
                 </p>
                 <p>
-                  <i class="bi bi-geo-alt-fill"></i
-                  ><span>{{ location }}</span>
+                  <i class="bi bi-geo-alt-fill"></i><span>{{ location }}</span>
                 </p>
               </div>
             </div>
@@ -51,6 +54,11 @@
   </section>
 </template>
 <script setup>
+import { ref } from "vue";
+const title = ref("Introducing Myself");
+const description = ref(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+);
 // const imageUrl = "@assets/mustak-8.jpg";
 const name = "Mustak Ahmed Kafy";
 const occupation = "Frontend Developer";
@@ -69,7 +77,6 @@ const speech =
   margin: 10px auto;
 }
 
-
 @media (max-width: 768px) {
   .tab-margin {
     margin-top: 20px;
@@ -80,7 +87,7 @@ const speech =
 .bi {
   color: #0d656c;
 }
-.tab-margin span{
+.tab-margin span {
   margin-left: 3px;
 }
 </style>

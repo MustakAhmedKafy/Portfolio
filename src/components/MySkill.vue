@@ -1,15 +1,22 @@
 <script setup>
 import { ref } from "vue";
+
 const title = ref("Areas of Strength");
 const description = ref(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
 );
+
+const skills = ref([
+  { icon: "../skill_icon/html.png", name: "HTML" },
+  { icon: "../skill_icon/css.png", name: "CSS" },
+  // Add other skills here...
+]);
 </script>
 
 <template>
   <section class="skill py-5" id="skill">
     <div class="container">
-       <div class="row justify-content-center text-center">
+      <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">
           <div class="header-section">
             <h2 class="title">{{ title }}</h2>
@@ -19,7 +26,7 @@ const description = ref(
       </div>
       <!-- <h2 class="text-center text-uppercase">My Skill</h2>
       <div class="hr-line"></div> -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-2 col-md-4 col-6 mt-3">
           <div class="text-center p-3 border rounded bg-light shadow">
             <img src="../skill_icon/html.png" alt="" />
@@ -115,6 +122,18 @@ const description = ref(
           <div class="text-center p-3 border rounded bg-light shadow">
             <img src="../skill_icon/filmora.png" alt="" />
             <h6 class="mt-2">Video Editing</h6>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div
+          v-for="(skill, index) in skills"
+          :key="index"
+          class="col-lg-2 col-md-4 col-6 mt-3"
+        >
+          <div class="text-center p-3 border rounded bg-light shadow">
+            <img :src="skill.icon" alt="" />
+            <h6 class="mt-2">{{ skill.name }}</h6>
           </div>
         </div>
       </div>

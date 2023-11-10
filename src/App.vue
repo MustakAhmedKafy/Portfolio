@@ -4,6 +4,7 @@ import Banner from './components/Banner.vue'
 import About from './components/About.vue'
 import MySkill from './components/MySkill.vue'
 import Services from './components/Services.vue'
+import Experience from './components/Experience.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Services from './components/Services.vue'
 <About />
 <MySkill />
 <Services />
+<Experience />
 <!-- <HelloWorld /> -->
 </template>
 
