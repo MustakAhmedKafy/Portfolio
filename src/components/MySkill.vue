@@ -7,8 +7,22 @@ const description = ref(
 );
 
 const skills = ref([
-  { icon: "../skill_icon/html.png", name: "HTML" },
-  { icon: "../skill_icon/css.png", name: "CSS" },
+  { icon: "/skill_icon/html.png", name: "HTML" },
+  { icon: "/skill_icon/css.png", name: "CSS" },
+  { icon: "/skill_icon//sass.png", name: "SCSS" },
+  { icon: "/skill_icon/bootstrap.png", name: "Bootstrap" },
+  { icon: "/skill_icon/tailwind.png", name: "Tailwind CSS" },
+  { icon: "/skill_icon/javascript.png", name: "Javascript" },
+  { icon: "/skill_icon/vuejs.png", name: "Vue JS" },
+  { icon: "/skill_icon/jquery.png", name: "jQuery" },
+  { icon: "/skill_icon/vuetify.svg", name: "Vuetify" },
+  { icon: "/skill_icon/antDesign.png", name: "Ant Design" },
+  { icon: "/skill_icon/php.png", name: "PHP" },
+  { icon: "/skill_icon/mysql.png", name: "My SQL" },
+    { icon: "/skill_icon/git.png", name: "Git" },
+  { icon: "/skill_icon/github.png", name: "Git Hub" },
+  { icon: "/skill_icon/MSoffice.png", name: "MS Office" },
+  { icon: "/skill_icon/filmora.png", name: "Video Editing" },
   // Add other skills here...
 ]);
 </script>
@@ -114,7 +128,7 @@ const skills = ref([
         </div>
         <div class="col-lg-2 col-md-4 col-6 mt-3">
           <div class="text-center p-3 border rounded bg-light shadow">
-            <img src="../skill_icon/MSoffice.png" alt="" />
+            <img src="../skill_icon/.png" alt="" />
             <h6 class="mt-2">MS Office</h6>
           </div>
         </div>
