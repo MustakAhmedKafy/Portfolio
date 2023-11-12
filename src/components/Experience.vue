@@ -1,208 +1,178 @@
 <template>
-  <div class="container mt-5">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs border-0 d-flex justify-content-center" id="myTabs">
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          id="experience-tab"
-          data-bs-toggle="tab"
-          href="#experience"
-          >Experience</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          id="education-tab"
-          data-bs-toggle="tab"
-          href="#education"
-          >Education</a
-        >
-      </li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content mt-2">
-      <div class="tab-pane fade show active" id="experience">
-        <div class="timeline">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="timeline-container">
-                  <div class="timeline-end">
-                    <p><i class="fa fa-briefcase"></i></p>
-                  </div>
-                  <div class="timeline-continue">
-                    <div class="row timeline-right">
-                      <div class="col-md-6">
-                        <p class="timeline-date">August 13, 2023–Continuing</p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Junior Software Engineer</h3>
-                            <p>Neutron Ltd</p>
-                          </div>
-                        </div>
-                      </div>
+  <!-- Nav tabs -->
+  <div class="timeline mt-5" id="experience">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-10 col-lg-8">
+          <div class="header-section">
+            <h2 class="title">{{ title }}</h2>
+            <p class="description">{{ description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="timeline-container">
+            <div class="timeline-end">
+              <p><i class="fa fa-briefcase"></i></p>
+            </div>
+            <div class="timeline-continue">
+              <div class="row timeline-right">
+                <div class="col-md-6">
+                  <p class="timeline-date">August 13, 2023–Continuing</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon">
+                      <i class="fa fa-briefcase"></i>
                     </div>
-
-                    <div class="row timeline-left">
-                      <div class="col-md-6 d-md-none d-block">
-                        <p class="timeline-date">
-                          March 27, 2023–August 10, 2023
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon d-md-none d-block">
-                            <p><i class="fa fa-briefcase"></i></p>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Frontend Developer</h3>
-                            <p>Hexa Tech</p>
-                          </div>
-                          <div class="timeline-icon d-md-block d-none">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 d-md-block d-none">
-                        <p class="timeline-date">
-                          March 27, 2023–August 10, 2023
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="timeline-year">
-                          <p><i class="fa fa-briefcase"></i></p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row timeline-right">
-                      <div class="col-md-6">
-                        <p class="timeline-date">May 10, 2022 –March 8, 2023</p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Assistant Senior Officer</h3>
-                            <p>Wolton Digi-Tech Industries Limited</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row timeline-left">
-                      <div class="col-md-6 d-md-none d-block">
-                        <p class="timeline-date">
-                          September 10, 2021 – December 10, 2021
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon d-md-none d-block">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Frontend Developer Internship</h3>
-                            <p>Developer Experience Hub</p>
-                          </div>
-                          <div class="timeline-icon d-md-block d-none">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 d-md-block d-none">
-                        <p class="timeline-date">
-                          September 10, 2021 – December 10, 2021
-                        </p>
-                      </div>
-                    </div>
-                     <div class="row">
-                      <div class="col-12">
-                        <div class="timeline-year">
-                          <p><i class="fa fa-briefcase"></i></p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row timeline-right">
-                      <div class="col-md-6">
-                        <p class="timeline-date">
-                          February 1, 2021 – July 31, 2021
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Trainer</h3>
-                            <p>Self Development Technical Training Institute</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row timeline-left">
-                      <div class="col-md-6 d-md-none d-block">
-                        <p class="timeline-date">
-                          October 1, 2018 – March 31, 2019
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="timeline-box">
-                          <div class="timeline-icon d-md-none d-block">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                          <div class="timeline-text">
-                            <h3>Web Designer</h3>
-                            <p>SATT IT</p>
-                          </div>
-                          <div class="timeline-icon d-md-block d-none">
-                            <i class="fa fa-briefcase"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 d-md-block d-none">
-                        <p class="timeline-date">
-                          October 1, 2018 – March 31, 2019
-                        </p>
-                      </div>
+                    <div class="timeline-text">
+                      <h3>Junior Software Engineer</h3>
+                      <p>Neutron Ltd</p>
                     </div>
                   </div>
-                  <div class="timeline-start">
-                    <p><i class="fa fa-briefcase"></i></p>
-                  </div>
-                 
                 </div>
               </div>
+
+              <div class="row timeline-left">
+                <div class="col-md-6 d-md-none d-block">
+                  <p class="timeline-date">March 27, 2023–August 10, 2023</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon d-md-none d-block">
+                      <p><i class="fa fa-briefcase"></i></p>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Frontend Developer</h3>
+                      <p>Hexa Tech</p>
+                    </div>
+                    <div class="timeline-icon d-md-block d-none">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-md-block d-none">
+                  <p class="timeline-date">March 27, 2023–August 10, 2023</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="timeline-year">
+                    <p><i class="fa fa-briefcase"></i></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row timeline-right">
+                <div class="col-md-6">
+                  <p class="timeline-date">May 10, 2022 –March 8, 2023</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Assistant Senior Officer</h3>
+                      <p>Wolton Digi-Tech Industries Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row timeline-left">
+                <div class="col-md-6 d-md-none d-block">
+                  <p class="timeline-date">
+                    September 10, 2021 – December 10, 2021
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon d-md-none d-block">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Frontend Developer Internship</h3>
+                      <p>Developer Experience Hub</p>
+                    </div>
+                    <div class="timeline-icon d-md-block d-none">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-md-block d-none">
+                  <p class="timeline-date">
+                    September 10, 2021 – December 10, 2021
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="timeline-year">
+                    <p><i class="fa fa-briefcase"></i></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row timeline-right">
+                <div class="col-md-6">
+                  <p class="timeline-date">February 1, 2021 – July 31, 2021</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Trainer</h3>
+                      <p>Self Development Technical Training Institute</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row timeline-left">
+                <div class="col-md-6 d-md-none d-block">
+                  <p class="timeline-date">October 1, 2018 – March 31, 2019</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon d-md-none d-block">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Web Designer</h3>
+                      <p>SATT IT</p>
+                    </div>
+                    <div class="timeline-icon d-md-block d-none">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-md-block d-none">
+                  <p class="timeline-date">October 1, 2018 – March 31, 2019</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-start">
+              <p><i class="fa fa-briefcase"></i></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="education">
-        <h4>Education</h4>
-        <p id="education-content">
-          Dynamic content for education tab goes here.
-        </p>
-      </div>
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const title = ref("Professional Background");
+const description = ref(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+);
+</script>
 
 <style scoped>
 .title {

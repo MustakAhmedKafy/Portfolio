@@ -1,7 +1,7 @@
 <template>
   <section class="about py-5" id="about">
-    <div class="row justify-content-center text-center">
-      <div class="col-md-10 col-lg-8">
+    <div class="justify-content-center text-center">
+      <div class="col-md-12">
         <div class="header-section">
           <h2 class="title">{{ title }}</h2>
           <p class="description">{{ description }}</p>
@@ -56,9 +56,9 @@
 <script setup>
 import { ref } from "vue";
 const title = ref("Introducing Myself");
-const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
-);
+// const description = ref(
+//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+// );
 // const imageUrl = "@assets/mustak-8.jpg";
 const name = "Mustak Ahmed Kafy";
 const occupation = "Frontend Developer";

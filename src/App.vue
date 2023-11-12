@@ -12,8 +12,8 @@ import Experience from './components/Experience.vue'
 <Banner />
 <About />
 <MySkill />
-<Services />
+<Services /> 
 <Experience />
-<!-- <HelloWorld /> -->
+<HelloWorld />
 </template>
 

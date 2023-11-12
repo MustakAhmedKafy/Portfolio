@@ -8,8 +8,9 @@ const navLinks = [
   { label: "Home", key: "index.html" },
   { label: "About", key: "#about" },
   { label: "Skill", key: "#skill" },
+    { label: "Services", key: "#services" },
     { label: "Experience", key: "#experience" },
-  { label: "Services", key: "#services" },
+
   { label: "Project" },
   { label: "Photography" },
   { label: "Video Editing" },
