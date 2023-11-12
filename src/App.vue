@@ -5,6 +5,7 @@ import About from './components/About.vue'
 import MySkill from './components/MySkill.vue'
 import Services from './components/Services.vue'
 import Experience from './components/Experience.vue'
+import project from './components/Project.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Experience from './components/Experience.vue'
 <MySkill />
 <Services /> 
 <Experience />
-<HelloWorld />
+<project />
+<!-- <HelloWorld /> -->
 </template>
 

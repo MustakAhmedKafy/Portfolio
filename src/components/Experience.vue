@@ -64,7 +64,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="row timeline-right">
                 <div class="col-md-6">
                   <p class="timeline-date">May 10, 2022 –March 8, 2023</p>
@@ -274,6 +273,7 @@ const description = ref(
   border: 1px solid #dddddd;
   border-radius: 6px;
   background: #ffffff;
+  width: 305px;
 }
 
 .timeline .timeline-launch {
@@ -422,6 +422,12 @@ const description = ref(
   .timeline .timeline-launch .timeline-box::before {
     left: 30px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline .timeline-end, .timeline .timeline-year, .timeline .timeline-start  p {
+    margin-left: 8px!important;
   }
 }
 </style>
