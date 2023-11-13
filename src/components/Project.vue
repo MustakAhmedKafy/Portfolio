@@ -42,7 +42,7 @@ const cards = ref([
 
       <div class="row">
         <!-- CARD 1-->
-        <div v-for="(card, index) in cards" :key="index" class="col-lg-4">
+        <div v-for="(card, index) in cards" :key="index" class="col-lg-3">
           <a :href="card.url" class="url-box">
             <figure class="newsCard news-Slide-up">
               <img :src="card.imageUrl" />
@@ -56,8 +56,12 @@ const cards = ref([
                   <i class="fas fa-arrow-alt-circle-right"></i>
                 </div>
                 <div class="newsCaption-content d-flex">
-                  <p class="col-10 py-3 px-0">{{ card.description }}</p>
+                  <span class="col-10 py-3 px-0">{{ card.description }}</span>
                 </div>
+                  <button type="button" class="btn btn-primary  mt-3">
+              Preview
+             
+            </button>
               </div>
               <span class="overlay"></span>
             </figure>
@@ -90,10 +94,10 @@ figure img {
 }
 
 .overlay {
-  background: rgb(40, 26, 54);
+  background: rgb(12, 99, 107);
   background: -moz-linear-gradient(0deg, rgba(40, 26, 54, 1) 0%, rgba(89, 59, 116, 0) 100%);
   background: -webkit-linear-gradient(0deg, rgba(40, 26, 54, 1) 0%, rgba(89, 59, 116, 0) 100%);
-  background: linear-gradient(0deg, rgba(40, 26, 54, 1) 0%, rgba(89, 59, 116, 0) 100%);
+  background: linear-gradient(0deg, rgba(12, 99, 107, 1) 0%, rgba(12, 99, 107, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#281a36", endColorstr="#593b74", GradientType=1);
   display: block;
   position: absolute;
@@ -137,10 +141,10 @@ figure img {
 }
 
 .news-Slide-up:hover .overlay {
-  background: rgb(64, 10, 111);
-  background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
-  background: linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
+  background: rgb(12, 99, 107);
+  /* background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%); */
+  background: linear-gradient(0deg, rgba(47, 200, 189, 1) 0%, rgba(12, 99, 107, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
 }
 
