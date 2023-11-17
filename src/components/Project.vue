@@ -1,35 +1,41 @@
 <script setup>
 import { ref } from "vue";
 
-const title = ref("Provided Solutions");
+const title = ref("Creative Showcase");
 const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+  "Here showcases a collection of my frontend development work, demonstrating my proficiency in creating responsive, visually appealing websites with clean code and intuitive user interfaces. Explore my projects and witness the power of clean code and innovative design."
 );
 
 const cards = ref([
   {
-    imageUrl: 'https://source.unsplash.com/1600x900/?background',
-    title: 'Title Examples 1',
-    description: 'Lorem ipsum description examples.',
-    url: '#'
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 1",
+    description: "Lorem ipsum description examples.",
+    url: "#",
   },
   {
-    imageUrl: 'https://source.unsplash.com/1600x900/?background',
-    title: 'Title Examples 2',
-    description: 'Lorem ipsum description examples.',
-    url: '#'
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 2",
+    description: "Lorem ipsum description examples.",
+    url: "#",
   },
   {
-    imageUrl: 'https://source.unsplash.com/1600x900/?background',
-    title: 'Title Examples 3',
-    description: 'Lorem ipsum description examples.',
-    url: '#'
-  }
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 3",
+    description: "Lorem ipsum description examples.",
+    url: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 3",
+    description: "Lorem ipsum description examples.",
+    url: "#",
+  },
 ]);
 </script>
 
 <template>
-  <section class="section-services py-5" id="services">
+  <section class="section-services py-5" id="project">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">
@@ -53,15 +59,16 @@ const cards = ref([
                   <h5 class="newsCaption-title text-white m-0">
                     {{ card.title }}
                   </h5>
-                  <i class="fas fa-arrow-alt-circle-right"></i>
+                  <div class="link-icon">
+                    <i class="fa-solid fa-link"></i>
+                  </div>
                 </div>
                 <div class="newsCaption-content d-flex">
-                  <span class="col-10 py-3 px-0">{{ card.description }}</span>
+                  <span class="col-10 py-2 px-0">{{ card.description }}</span>
                 </div>
-                  <button type="button" class="btn btn-primary  mt-3">
-              Preview
-             
-            </button>
+                <button type="button" class="btn btn-light mt-3">
+                  Preview
+                </button>
               </div>
               <span class="overlay"></span>
             </figure>
@@ -72,10 +79,26 @@ const cards = ref([
   </section>
 </template>
 
-
-
 <style scoped>
-
+.link-icon .fa-link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  font-size: 16px;
+  color: #0c636b;
+  margin-right: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.link-icon .fa-link:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 .newsCard {
   position: relative;
   width: 100%;
@@ -95,9 +118,21 @@ figure img {
 
 .overlay {
   background: rgb(12, 99, 107);
-  background: -moz-linear-gradient(0deg, rgba(40, 26, 54, 1) 0%, rgba(89, 59, 116, 0) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(40, 26, 54, 1) 0%, rgba(89, 59, 116, 0) 100%);
-  background: linear-gradient(0deg, rgba(12, 99, 107, 1) 0%, rgba(12, 99, 107, 0) 100%);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(40, 26, 54, 1) 0%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(40, 26, 54, 1) 0%,
+    rgba(89, 59, 116, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(12, 99, 107, 1) 0%,
+    rgba(12, 99, 107, 0) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#281a36", endColorstr="#593b74", GradientType=1);
   display: block;
   position: absolute;
@@ -119,10 +154,7 @@ figure img {
   transform: translateY(80%);
   backface-visibility: hidden;
   transition: transform 0.4s;
-}
-
-.newsCaption i {
-  font-size: 24px;
+  color: #fff;
 }
 
 .newsCaption-title {
@@ -144,13 +176,15 @@ figure img {
   background: rgb(12, 99, 107);
   /* background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
   background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%); */
-  background: linear-gradient(0deg, rgba(47, 200, 189, 1) 0%, rgba(12, 99, 107, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(47, 200, 189, 1) 0%,
+    rgba(12, 99, 107, 0) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
 }
 
 .news-Slide-up:hover .newsCaption {
   transform: translateY(0);
 }
-
 </style>
-

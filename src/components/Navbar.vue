@@ -8,11 +8,10 @@ const navLinks = [
   { label: "Home", key: "index.html" },
   { label: "About", key: "#about" },
   { label: "Skill", key: "#skill" },
-    { label: "Services", key: "#services" },
-    { label: "Experience", key: "#experience" },
-
-  { label: "Project" },
-  { label: "Photography" },
+  { label: "Services", key: "#services" },
+  { label: "Experience", key: "#experience" },
+  { label: "Project", key: "#project" },
+  { label: "Photography", key: "#photography" },
   { label: "Video Editing" },
   { label: "Contact" },
   { label: "CV" },
@@ -155,7 +154,7 @@ function eraseText() {
   bottom: 0;
   width: 0; /* Initially, the line has zero width */
   height: 2px;
-  background-color: #0F6D73; /* Set your line color */
+  background-color: #0f6d73; /* Set your line color */
   transition: width 0.3s ease; /* Add transition effect for width */
 }
 
@@ -164,7 +163,7 @@ function eraseText() {
 }
 
 .nav-link.active {
-  color: #0F6D73!important; /* Set your active link color */
+  color: #0f6d73 !important; /* Set your active link color */
   font-weight: bold;
 }
 
