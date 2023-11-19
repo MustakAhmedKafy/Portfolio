@@ -66,12 +66,12 @@ function eraseText() {
             <h2>{{ typedText }}</h2>
           </div>
 
-          <a :href="cvLink" download>
+          <!-- <a :href="cvLink" download>
             <button type="button" class="btn btn-light  mt-3">
               Download CV
               <i class="fa fa-download" aria-hidden="true"></i>
             </button>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
