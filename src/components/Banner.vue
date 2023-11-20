@@ -1,8 +1,24 @@
 <script setup>
+import Button from "./Button.vue";
 import { ref, onMounted } from "vue";
+const button1 = {
+  link: "#",
+  text: "Download CV",
+};
+
+// const button2 = {
+//   link: "#button2link",
+//   text: "Button 2",
+// };
+
 const title = "I am Mustak Ahmed";
 // text type
-const textsToType = ["Frontend Developer", "Web Designer", "Photographer", "Content Creator"];
+const textsToType = [
+  "Frontend Developer",
+  "Web Designer",
+  "Photographer",
+  "Content Creator",
+];
 const typingSpeed = 100;
 
 let textIndex = 0;
@@ -56,85 +72,102 @@ function eraseText() {
 <template>
   <div>
     <div class="header">
-         <div id="home" class="intro route bg-image">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell  inner-header flex">
-        <div class="container">
-          <h1 class="intro-title mb-4">{{ title }}</h1>
-          <div style="height: 70px">
-            <h2>{{ typedText }}</h2>
-          </div>
+      <div id="home" class="intro route bg-image">
+        <div class="overlay-itro"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell inner-header flex">
+            <div class="container">
+              <h1 class="intro-title mb-4">{{ title }}</h1>
+              <div style="height: 70px">
+                <h2>{{ typedText }}</h2>
+              </div>
+              <Button :link="button1.link" :buttonText="button1.text"></Button>
 
-          <!-- <a :href="cvLink" download>
-            <button type="button" class="btn btn-light  mt-3">
-              Download CV
-              <i class="fa fa-download" aria-hidden="true"></i>
-            </button>
-          </a> -->
+            
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-        <!-- <div class="inner-header flex">
+      <!-- <div class="inner-header flex">
        
         <h1>{{title}}</h1>
         </div> -->
-        
-        <!--Waves Container-->
-        <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-        </g>
+
+      <!--Waves Container-->
+      <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
         </svg>
-        </div>
-        <!--Waves end-->
-        
-        </div>
-        <!--Header ends-->
+      </div>
+      <!--Waves end-->
+    </div>
+    <!--Header ends-->
   </div>
 </template>
 
-
 <style scoped>
-
 h1 {
-  font-family: 'Dancing Script', sans-serif;
-  font-weight:300;
+  font-family: "Dancing Script", sans-serif;
+  font-weight: 300;
   letter-spacing: 2px;
-  font-size:48px;
-
+  font-size: 48px;
 }
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   letter-spacing: 1px;
-  font-size:14px;
+  font-size: 14px;
   color: #333333;
 }
 
 .header {
-  position:relative;
-  text-align:center;
+  position: relative;
+  text-align: center;
   background: linear-gradient(60deg, rgb(54, 218, 204) 0%, rgb(8, 88, 98) 100%);
-  color:white;
+  color: white;
 }
 
 .inner-header {
-  height:65vh;
-  width:100%;
+  height: 65vh;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.flex { /*Flexbox for containers*/
+.flex {
+  /*Flexbox for containers*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,25 +175,25 @@ p {
 }
 
 .waves {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .content {
-  position:relative;
-  height:20vh;
-  text-align:center;
+  position: relative;
+  height: 20vh;
+  text-align: center;
   background-color: white;
 }
 
 /* Animation */
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
@@ -180,27 +213,25 @@ p {
 }
 @keyframes move-forever {
   0% {
-   transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
-  100% { 
-    transform: translate3d(85px,0,0);
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
   .content {
-    height:30vh;
+    height: 30vh;
   }
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
 }
-
-
 
 .display-table {
   width: 100%;
@@ -224,7 +255,6 @@ p {
   position: absolute;
 }
 
-
 .intro .intro-title {
   color: #fff;
   font-weight: 600;
@@ -240,7 +270,6 @@ p {
 .intro .text-slider-items {
   display: none;
 }
-
 
 .intro .text-slider {
   display: inline-block;

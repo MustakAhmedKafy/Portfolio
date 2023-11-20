@@ -1,28 +1,41 @@
 <script setup>
-document.querySelectorAll(".button_su_inner").forEach(function (button) {
-  button.addEventListener("mouseenter", function (e) {
-    var parentOffset = this.getBoundingClientRect();
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
+import { onMounted, ref, defineProps } from "vue";
 
-    var circle = this.previousElementSibling;
+const props = defineProps(["link", "buttonText"]);
+
+const myLink = ref(props.link || "#");
+const myButtonText = ref(props.buttonText || "Click me");
+onMounted(() => {
+  const buttons = document.querySelectorAll(".button_su_inner");
+
+  buttons.forEach((button) => {
+    button.addEventListener("mouseenter", handleMouseEnter);
+    button.addEventListener("mouseleave", handleMouseLeave);
+  });
+
+  function handleMouseEnter(e) {
+    const parentOffset = this.getBoundingClientRect();
+    const relX = e.pageX - parentOffset.left;
+    const relY = e.pageY - parentOffset.top;
+
+    const circle = this.previousElementSibling;
     circle.style.left = relX + "px";
     circle.style.top = relY + "px";
     circle.classList.remove("desplode-circle");
     circle.classList.add("explode-circle");
-  });
+  }
 
-  button.addEventListener("mouseleave", function (e) {
-    var parentOffset = this.getBoundingClientRect();
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
+  function handleMouseLeave(e) {
+    const parentOffset = this.getBoundingClientRect();
+    const relX = e.pageX - parentOffset.left;
+    const relY = e.pageY - parentOffset.top;
 
-    var circle = this.previousElementSibling;
+    const circle = this.previousElementSibling;
     circle.style.left = relX + "px";
     circle.style.top = relY + "px";
     circle.classList.remove("explode-circle");
     circle.classList.add("desplode-circle");
-  });
+  }
 });
 </script>
 
@@ -30,8 +43,8 @@ document.querySelectorAll(".button_su_inner").forEach(function (button) {
   <div class="button_container">
     <div class="button_su">
       <span class="su_button_circle"> </span>
-      <a href="#" class="button_su_inner">
-        <span class="button_text_container"> Simple button </span>
+      <a :href="link" class="button_su_inner">
+        <span class="button_text_container">{{ buttonText }}</span>
       </a>
     </div>
   </div>
@@ -59,22 +72,23 @@ document.querySelectorAll(".button_su_inner").forEach(function (button) {
   margin-left: 0px;
   margin-top: 0px;
   pointer-events: none;
-  /*animation-timing-function: ease-in-out; */
 }
 
 .button_su_inner {
   display: inline-block;
-  background: #f8b627;
-  color: #f4f4f4;
+  background: #f4f4f4;
+  color: #0c636b;
   font-size: 16px;
   font-weight: normal;
-  width: 132px;
   text-align: center;
   border-radius: 3px;
   transition: 400ms;
   text-decoration: none;
-  padding: 22px;
+  padding: 10px 15px;
   z-index: 100000;
+}
+.button_su_inner:hover {
+  color: #fff;
 }
 
 .button_text_container {
@@ -103,7 +117,7 @@ document.querySelectorAll(".button_su_inner").forEach(function (button) {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
+    background-color: rgba(47, 200, 189, 0.8);
   }
 }
 
@@ -113,7 +127,7 @@ document.querySelectorAll(".button_su_inner").forEach(function (button) {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
+    background-color: rgba(47, 200, 189, 0.8);
   }
   100% {
     width: 0px;

@@ -1,5 +1,11 @@
 <script setup>
 import { ref } from "vue";
+import Button from "./Button.vue";
+
+const button2 = {
+  link: "#button2link",
+  text: "Button 2",
+};
 
 const title = ref("Creative Showcase");
 const description = ref(
@@ -66,9 +72,10 @@ const cards = ref([
                 <div class="newsCaption-content d-flex">
                   <span class="col-10 py-2 px-0">{{ card.description }}</span>
                 </div>
-                <button type="button" class="btn btn-light mt-3">
-                  Preview
-                </button>
+                <Button
+                  :link="button2.link"
+                  :buttonText="button2.text"
+                ></Button>
               </div>
               <span class="overlay"></span>
             </figure>
