@@ -3,47 +3,17 @@ import { ref } from "vue";
 
 const title = ref("Provided Solutions");
 const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+  "Transforming raw footage into compelling visual stories with precision and creativity. Let me bring your vision to life."
 );
 
-const services = ref([
-  {
-    icon: "bi bi-code-slash",
-    title: "Frontend Development",
-    description:
-      "Crafting seamless user experiences with expert front-end development solutions.",
-  },
-  {
-    icon: "fa-brands fa-html5", // Correct icon class for HTML5
-    title: "Web Design",
-    description:
-      "Innovative web design solutions for captivating online experiences.",
-  },
-  {
-    icon: "fas fa-laptop-code", // Correct FontAwesome icon class for laptop-code
-    title: "Responsive Design",
-    description:
-      "Creating seamless and engaging experiences across all devices.",
-  },
-  {
-    icon: "bi bi-file-earmark-code-fill",
-    title: "Clean Coding",
-    description:
-      "Delivering high-quality code for efficient and maintainable websites.",
-  },
-  {
-    icon: "bi bi-bug",
-    title: "Problem Solving",
-    description:
-      "Solving complex issues with innovative solutions and expertise.",
-  },
-  {
-    icon: "bi bi-camera-reels",
-    title: "Video Editing",
-    description:
-      "Transforming your footage into stunning visual narratives with precision.",
-  },
-]);
+const videos = [
+  { id: "video_1", src: "https://www.youtube.com/embed/rbhoI9zZj0Q" },
+  { id: "video_2", src: "https://www.youtube.com/embed/isjwoD4qZX0" },
+  { id: "video_3", src: "https://www.youtube.com/embed/J5ffJxJhVmQ" },
+  { id: "video_4", src: "https://www.youtube.com/embed/xqNydcmM2XA" },
+  { id: "video_5", src: "https://www.youtube.com/embed/nkzDZW4cY6I" },
+  { id: "video_6", src: "https://www.youtube.com/embed/iS3zsukbWYo" },
+];
 </script>
 
 <template>
@@ -58,25 +28,23 @@ const services = ref([
         </div>
       </div>
       <div class="row">
-        <!-- Single Service -->
         <div
-          v-for="service in services"
-          :key="service.title"
-          class="col-md-6 col-lg-4"
+          v-for="(video, index) in videos"
+          :key="index"
+          class="col-md-4 mt-5"
         >
-          <div class="single-service">
-            <div class="content">
-              <span class="icon">
-                <i :class="service.icon"></i>
-                <!-- <img src="../assets/icons8-developer-48.png" alt=""> -->
-              </span>
-              <h3 class="title">{{ service.title }}</h3>
-              <p class="description">{{ service.description }}</p>
-            </div>
-            <span class="circle-before"></span>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+            width="100%"
+            height="230"
+              :src="video.src"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
-        <!-- / End Single Service -->
       </div>
     </div>
   </section>

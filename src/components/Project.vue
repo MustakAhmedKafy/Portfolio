@@ -3,8 +3,7 @@ import { ref } from "vue";
 import Button from "./Button.vue";
 
 const button2 = {
-  link: "#button2link",
-  text: "Button 2",
+  text: "Preview",
 };
 
 const title = ref("Creative Showcase");
@@ -17,11 +16,23 @@ const cards = ref([
     imageUrl: "https://source.unsplash.com/1600x900/?background",
     title: "Title Examples 1",
     description: "Lorem ipsum description examples.",
-    url: "#",
+    url: "https://source.unsplash.com/1600x900/?background",
   },
   {
     imageUrl: "https://source.unsplash.com/1600x900/?background",
     title: "Title Examples 2",
+    description: "Lorem ipsum description examples.",
+    url: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 3",
+    description: "Lorem ipsum description examples.",
+    url: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?background",
+    title: "Title Examples 3",
     description: "Lorem ipsum description examples.",
     url: "#",
   },
@@ -54,7 +65,11 @@ const cards = ref([
 
       <div class="row">
         <!-- CARD 1-->
-        <div v-for="(card, index) in cards" :key="index" class="col-lg-3">
+        <div
+          v-for="(card, index) in cards"
+          :key="index"
+          class="col-lg-4 col-md-6 col-sm-12"
+        >
           <a :href="card.url" class="url-box">
             <figure class="newsCard news-Slide-up">
               <img :src="card.imageUrl" />
@@ -72,10 +87,7 @@ const cards = ref([
                 <div class="newsCaption-content d-flex">
                   <span class="col-10 py-2 px-0">{{ card.description }}</span>
                 </div>
-                <Button
-                  :link="button2.link"
-                  :buttonText="button2.text"
-                ></Button>
+                <Button :link="button2.url" :buttonText="button2.text"></Button>
               </div>
               <span class="overlay"></span>
             </figure>

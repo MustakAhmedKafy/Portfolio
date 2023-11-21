@@ -7,6 +7,8 @@ import Services from "./components/Services.vue";
 import Experience from "./components/Experience.vue";
 import Project from "./components/Project.vue";
 import Gallery from "./components/Gallery.vue";
+import VideoGallery from "./components/VideoGallery.vue";
+import Contact from "./components/Contact.vue";
 </script>
 
 <template>
@@ -18,5 +20,7 @@ import Gallery from "./components/Gallery.vue";
   <Experience />
   <Project />
   <Gallery />
+  <VideoGallery />
+  <Contact />
   <!-- <HelloWorld /> -->
 </template>

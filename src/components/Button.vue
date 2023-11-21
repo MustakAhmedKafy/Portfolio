@@ -39,7 +39,7 @@ onMounted(() => {
 
 <template>
   <div class="button_container">
-    <div class="button_su">
+    <div class="button_su rounded-pill">
       <span class="su_button_circle"> </span>
       <a :href="link" class="button_su_inner">
         <span class="button_text_container">{{ buttonText }}</span>
@@ -74,15 +74,15 @@ onMounted(() => {
 
 .button_su_inner {
   display: inline-block;
-  background: #f4f4f4;
+  background: #e6e6e6;
   color: #0c636b;
   font-size: 16px;
   font-weight: normal;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 0.375rem;
   transition: 400ms;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 0.375rem 1rem;
   z-index: 100000;
 }
 .button_su_inner:hover {
@@ -115,7 +115,7 @@ onMounted(() => {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(47, 200, 189, 0.8);
+    background-color: #0f6d73;
   }
 }
 
@@ -125,7 +125,7 @@ onMounted(() => {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: rgba(47, 200, 189, 0.8);
+    background-color: #0f6d73;
   }
   100% {
     width: 0px;
