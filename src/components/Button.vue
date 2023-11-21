@@ -14,11 +14,10 @@ onMounted(() => {
   });
 
   function handleMouseEnter(e) {
-    const parentOffset = this.getBoundingClientRect();
-    const relX = e.pageX - parentOffset.left;
-    const relY = e.pageY - parentOffset.top;
+    const relX = e.clientX - e.target.getBoundingClientRect().left;
+    const relY = e.clientY - e.target.getBoundingClientRect().top;
 
-    const circle = this.previousElementSibling;
+    const circle = e.target.previousElementSibling;
     circle.style.left = relX + "px";
     circle.style.top = relY + "px";
     circle.classList.remove("desplode-circle");
@@ -26,11 +25,10 @@ onMounted(() => {
   }
 
   function handleMouseLeave(e) {
-    const parentOffset = this.getBoundingClientRect();
-    const relX = e.pageX - parentOffset.left;
-    const relY = e.pageY - parentOffset.top;
+    const relX = e.clientX - e.target.getBoundingClientRect().left;
+    const relY = e.clientY - e.target.getBoundingClientRect().top;
 
-    const circle = this.previousElementSibling;
+    const circle = e.target.previousElementSibling;
     circle.style.left = relX + "px";
     circle.style.top = relY + "px";
     circle.classList.remove("explode-circle");
@@ -50,7 +48,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style>
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
 
 .button_su {

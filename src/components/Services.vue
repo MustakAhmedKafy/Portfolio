@@ -1,44 +1,54 @@
 <script setup>
-import { ref } from 'vue';
+import Button from "./Button.vue";
+import { ref } from "vue";
+const button1 = {
+  link: "#",
+  text: "Download CV",
+};
 
-
-    const title = ref('Provided Solutions');
-    const description = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et.');
+const title = ref("Provided Solutions");
+const description = ref(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+);
 
 const services = ref([
   {
-    icon: 'bi bi-code-slash',
-    title: 'Frontend Development',
-    description: 'Crafting seamless user experiences with expert front-end development solutions.',
+    icon: "bi bi-code-slash",
+    title: "Frontend Development",
+    description:
+      "Crafting seamless user experiences with expert front-end development solutions.",
   },
   {
-    icon: 'fa-brands fa-html5',// Correct icon class for HTML5
-    title: 'Web Design',
-    description: 'Innovative web design solutions for captivating online experiences.',
+    icon: "fa-brands fa-html5", // Correct icon class for HTML5
+    title: "Web Design",
+    description:
+      "Innovative web design solutions for captivating online experiences.",
   },
   {
-    icon: 'fas fa-laptop-code',// Correct FontAwesome icon class for laptop-code
-    title: 'Responsive Design',
-    description: 'Creating seamless and engaging experiences across all devices.',
+    icon: "fas fa-laptop-code", // Correct FontAwesome icon class for laptop-code
+    title: "Responsive Design",
+    description:
+      "Creating seamless and engaging experiences across all devices.",
   },
   {
-    icon: 'bi bi-file-earmark-code-fill',
-    title: 'Clean Coding',
-    description: 'Delivering high-quality code for efficient and maintainable websites.',
+    icon: "bi bi-file-earmark-code-fill",
+    title: "Clean Coding",
+    description:
+      "Delivering high-quality code for efficient and maintainable websites.",
   },
   {
-    icon: 'bi bi-bug',
-    title: 'Problem Solving',
-    description: 'Solving complex issues with innovative solutions and expertise.',
+    icon: "bi bi-bug",
+    title: "Problem Solving",
+    description:
+      "Solving complex issues with innovative solutions and expertise.",
   },
   {
-    icon: 'bi bi-camera-reels',
-    title: 'Video Editing',
-    description: 'Transforming your footage into stunning visual narratives with precision.',
+    icon: "bi bi-camera-reels",
+    title: "Video Editing",
+    description:
+      "Transforming your footage into stunning visual narratives with precision.",
   },
 ]);
-
-
 </script>
 
 <template>
@@ -54,7 +64,11 @@ const services = ref([
       </div>
       <div class="row">
         <!-- Single Service -->
-        <div v-for="service in services" :key="service.title" class="col-md-6 col-lg-4">
+        <div
+          v-for="service in services"
+          :key="service.title"
+          class="col-md-6 col-lg-4"
+        >
           <div class="single-service">
             <div class="content">
               <span class="icon">
@@ -63,20 +77,20 @@ const services = ref([
               </span>
               <h3 class="title">{{ service.title }}</h3>
               <p class="description">{{ service.description }}</p>
+             
             </div>
             <span class="circle-before"></span>
           </div>
         </div>
         <!-- / End Single Service -->
       </div>
+      
+       <Button :link="button1.link" :buttonText="button1.text"></Button>
     </div>
   </section>
 </template>
 
 <style scoped>
-
-
-
 .section-services .single-service {
   position: relative;
   margin-top: 30px;
@@ -98,7 +112,7 @@ const services = ref([
   transform: translate(40%, -40%);
   width: 150px;
   height: 150px;
-  background-color: #0F6D73;
+  background-color: #0f6d73;
   border: 6px solid #a6a6a6;
   border-radius: 50%;
   opacity: 0.8;
@@ -120,7 +134,7 @@ const services = ref([
   margin-bottom: 26px;
   width: 70px;
   height: 70px;
-  background-color: #0F6D73;
+  background-color: #0f6d73;
   border-radius: 5px;
   line-height: 70px;
   text-align: center;
@@ -131,7 +145,7 @@ const services = ref([
 
 .section-services .single-service:hover .icon {
   background-color: #fff;
-  color: #0F6D73;
+  color: #0f6d73;
 }
 
 .section-services .single-service .title {
@@ -175,7 +189,7 @@ const services = ref([
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #0F6D73;
+  background-color: #0f6d73;
   transition: background-color 0.3s;
 }
 

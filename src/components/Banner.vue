@@ -82,7 +82,6 @@ function eraseText() {
                 <h2>{{ typedText }}</h2>
               </div>
               <Button :link="button1.link" :buttonText="button1.text"></Button>
-
             
             </div>
           </div>
