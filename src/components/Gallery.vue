@@ -52,22 +52,22 @@ const description = ref(
 );
 
 const images = ref([
-  { path: "/gallery/photo-1.jpg" },
-  { path: "/gallery/photo-2.jpg" },
-  { path: "/gallery/photo-3.jpg" },
-  { path: "/gallery/photo-4.jpg" },
-  { path: "/gallery/photo-5.jpg" },
-  { path: "/gallery/photo-6.jpg" },
-  { path: "/gallery/photo-7.jpg" },
-  { path: "/gallery/photo-8.jpg" },
-  { path: "/gallery/photo-9.jpg" },
-  { path: "/gallery/photo-10.jpg" },
-  { path: "/gallery/photo-11.jpg" },
-  { path: "/gallery/photo-12.jpg" },
-  { path: "/gallery/photo-13.jpg" },
-  { path: "/gallery/photo-14.jpg" },
-  { path: "/gallery/photo-15.jpg" },
-  { path: "/gallery/photo-16.jpg" },
+  { path: "./gallery/photo-1.jpg" },
+  { path: "./gallery/photo-2.jpg" },
+  { path: "./gallery/photo-3.jpg" },
+  { path: "./gallery/photo-4.jpg" },
+  { path: "./gallery/photo-5.jpg" },
+  { path: "./gallery/photo-6.jpg" },
+  { path: "./gallery/photo-7.jpg" },
+  { path: "./gallery/photo-8.jpg" },
+  { path: "./gallery/photo-9.jpg" },
+  { path: "./gallery/photo-10.jpg" },
+  { path: "./gallery/photo-11.jpg" },
+  { path: "./gallery/photo-12.jpg" },
+  { path: "./gallery/photo-13.jpg" },
+  { path: "./gallery/photo-14.jpg" },
+  { path: "./gallery/photo-15.jpg" },
+  { path: "./gallery/photo-16.jpg" },
   // Add more image objects as needed
 ]);
 

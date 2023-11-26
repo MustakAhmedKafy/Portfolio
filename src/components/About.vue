@@ -15,7 +15,7 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
               <!-- image for about -->
               <img
-                src="../assets/mustak-8.jpg"
+                :src="myPhoto"
                 class="rounded float-left w-100 shadow-lg"
                 alt="My Picture"
               />
@@ -65,6 +65,7 @@ const occupation = "Frontend Developer";
 const email = "ahmedmustak99@gmail.com";
 const phone = "+880-1712604506";
 const location = "Rajshahi, Bangladesh";
+const myPhoto = "kafy.jpg";
 const speech =
   "Hi! I am Mustak Ahmed Kafy. I am professional Frontend Developer with 3 years of experience. Web design is my passion. I do my job passionately & dedicatedly. I try to do my project with no errors & greater efficiency. I can code all day long. I rarely feel bored and can't rest untill my code is complete. I can adapt to anything quickly and am very sincere. I belive in working hard and fullfilling my responsibilities.";
 </script>

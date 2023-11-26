@@ -1,23 +1,30 @@
-<script setup>
-import { ref } from "vue";
-import Social from "./Social.vue";
-import Button from "./Button.vue";
-const button2 = {
-  text: "Submit",
-};
+<script>
+import emailjs from "@emailjs/browser";
 
-const userName = ref("");
-const userEmail = ref("");
-const userMessage = ref("");
 
-const submitForm = () => {
-  // Handle form submission logic here
-  console.log(
-    "Form submitted!",
-    userName.value,
-    userEmail.value,
-    userMessage.value
-  );
+export default {
+  methods: {
+    sendEmail() {
+      // Assuming you have a form with a ref named "form" in your template
+      console.log(this.$refs.form);
+      
+      emailjs
+        .sendForm(
+          "service_315rfeo",
+          "template_hh12u02",
+          this.$refs.form,  // Make sure the ref name matches your actual ref
+          "4m1F6EabZqZnRTssE"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    },
+  },
 };
 </script>
 <template>
@@ -28,13 +35,13 @@ const submitForm = () => {
           <h2 class="text-center">SAY HELLO!</h2>
         </div>
         <div class="col-md-8">
-          <form @submit.prevent="submitForm">
+          <form ref="form" @submit.prevent="sendEmail">
             <div class="row">
               <div class="col-md-6 pb-3">
                 <div class="form-group input-field">
                   <input
-                    v-model="userName"
                     type="text"
+                    name="user_name"
                     class="form-control"
                     placeholder="Full Name"
                     required
@@ -44,8 +51,8 @@ const submitForm = () => {
               <div class="col-md-6 pb-3">
                 <div class="form-group input-field">
                   <input
-                    v-model="userEmail"
                     type="email"
+                    name="user_email"
                     class="form-control"
                     placeholder="Email Address"
                     required
@@ -56,7 +63,7 @@ const submitForm = () => {
                 <div class="form-group">
                   <div class="message">
                     <textarea
-                      v-model="userMessage"
+                      name="message"
                       class="form-control"
                       rows="3"
                       placeholder="Message"
@@ -64,8 +71,11 @@ const submitForm = () => {
                   </div>
                 </div>
               </div>
+              <!-- <input type="submit" value="Send" /> -->
 
-              <Button :link="button2.url" :buttonText="button2.text"></Button>
+              <button class="btn btn-primary" type="submit" value="Send">
+                Send
+              </button>
             </div>
           </form>
         </div>
@@ -95,8 +105,8 @@ const submitForm = () => {
 }
 
 .input-field .form-control:focus {
-  border-color: #011b22;
-  box-shadow: 0 0 0 0.15rem rgba(1, 27, 34, 0.8);
+  border-color: #0f6d73;
+  box-shadow: 0 0 0 0.15rem rgba(12, 108, 134, 0.8);
 }
 
 .message .form-control {
@@ -108,10 +118,9 @@ const submitForm = () => {
 }
 
 .message .form-control:focus {
-  border-color: #011b22;
-  box-shadow: 0 0 0 0.15rem rgba(1, 27, 34, 0.8);
+  border-color: #0f6d73;
+  box-shadow: 0 0 0 0.15rem rgba(12, 108, 134, 0.8);
 }
-
 .form-control::placeholder {
   font-family: "Alegreya Sans", sans-serif;
 }
