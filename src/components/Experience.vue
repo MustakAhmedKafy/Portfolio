@@ -1,3 +1,12 @@
+<script setup>
+import { ref } from "vue";
+
+const title = ref("Professional Background");
+const description = ref(
+  "Experienced front-end developer with a robust professional background. Proficient in web technologies, responsive design, and clean coding practices. Dedicated to delivering visually appealing and functional websites."
+);
+</script>
+
 <template>
   <!-- Nav tabs -->
   <div class="timeline mt-5" id="experience">
@@ -164,14 +173,6 @@
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
-
-const title = ref("Professional Background");
-const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
-);
-</script>
 
 <style scoped>
 .title {
@@ -426,8 +427,10 @@ const description = ref(
 }
 
 @media (max-width: 768px) {
-  .timeline .timeline-end, .timeline .timeline-year, .timeline .timeline-start  p {
-    margin-left: 8px!important;
+  .timeline .timeline-end,
+  .timeline .timeline-year,
+  .timeline .timeline-start p {
+    margin-left: 8px !important;
   }
 }
 </style>

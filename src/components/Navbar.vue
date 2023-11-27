@@ -12,9 +12,8 @@ const navLinks = [
   { label: "Experience", key: "#experience" },
   { label: "Project", key: "#project" },
   { label: "Photography", key: "#photography" },
-  { label: "Video Editing" },
-  { label: "Contact" },
-  { label: "CV" },
+  { label: "Video Editing", key: "#videogallery" },
+  { label: "Contact", key: "#contact" },
 ];
 
 const title = "I am Mustak Ahmed";

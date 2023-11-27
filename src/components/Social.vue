@@ -1,9 +1,10 @@
 <script setup>
-import Social from "./Social.vue";
+// import Social from "./Social.vue";
 </script>
 
 <template>
   <div>
+    <h3 class="mt-1">Join my social networks</h3>
     <ul class="social-network social-circle">
       <li>
         <a
@@ -29,16 +30,16 @@ import Social from "./Social.vue";
           target="_blank"
           class="icoLinkedin mt-2"
           title="Linkedin"
-          ><i class="fa-brands fa-linkedin-in"></i></a
-        >
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
       </li>
       <li>
         <a
           href="https://www.instagram.com/k_a_f_y/"
           target="_blank"
           class="icoInstagram mt-2"
-          ><i class="fa-brands fa-instagram"></i></a
-        >
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
       </li>
       <li>
         <a

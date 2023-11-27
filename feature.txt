@@ -1,4 +1,8 @@
 html resume
-timeline
 always animated icon
 font color gray and opacity
+
+
+row no gutter
+link  add
+title add

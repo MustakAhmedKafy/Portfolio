@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 const title = ref("Provided Solutions");
 const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+  "I provide professional frontend development services with expertise in web design, responsive design, clean coding, and problem-solving. Additionally, I offer video editing to enhance your digital content."
 );
 
 const services = ref([

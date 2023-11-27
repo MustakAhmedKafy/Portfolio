@@ -91,7 +91,7 @@ onMounted(() => {
 
 .button_text_container {
   position: relative;
-  z-index: 10000;
+  /* z-index: 10000; */
 }
 
 .explode-circle {

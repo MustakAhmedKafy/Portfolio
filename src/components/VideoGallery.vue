@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const title = ref("Provided Solutions");
+const title = ref("Edit Vision Studios");
 const description = ref(
   "Transforming raw footage into compelling visual stories with precision and creativity. Let me bring your vision to life."
 );
@@ -17,7 +17,7 @@ const videos = [
 </script>
 
 <template>
-  <section class="section-services py-5" id="services">
+  <section class="section-services py-5" id="videogallery">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">

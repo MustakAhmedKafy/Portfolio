@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 const title = ref("Areas of Strength");
 const description = ref(
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+  " Proficient in responsive design, cross-browser compatibility, and UI/UX principles. Strong problem-solving skills, collaboration, and attention to detail."
 );
 
 const skills = ref([

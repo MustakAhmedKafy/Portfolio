@@ -206,4 +206,14 @@ figure img {
 .news-Slide-up:hover .newsCaption {
   transform: translateY(0);
 }
+
+/* .row {
+  --bs-gutter-x: 8rem;
+}
+
+@media (max-width: 768px) {
+  .row {
+    --bs-gutter-x: -3rem;
+  }
+} */
 </style>

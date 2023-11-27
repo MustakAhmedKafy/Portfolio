@@ -46,9 +46,9 @@ import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
 
-const title = ref("Creative Showcase");
+const title = ref("Captured Moments");
 const description = ref(
-  "Here showcases a collection of my frontend development work, demonstrating my proficiency in creating responsive, visually appealing websites with clean code and intuitive user interfaces. Explore my projects and witness the power of clean code and innovative design."
+  "Embark on a visual odyssey through nature's wonders. Discover awe-inspiring landscapes, majestic wildlife, and breathtaking moments frozen in time, captured with a blend of artistry and passion."
 );
 
 const images = ref([
