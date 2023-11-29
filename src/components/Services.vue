@@ -83,9 +83,6 @@ const services = ref([
 </template>
 
 <style scoped>
-.row {
-  --bs-gutter-x: 3rem;
-}
 
 .section-services .single-service {
   position: relative;
@@ -192,4 +189,11 @@ const services = ref([
 .section-services .single-service:hover a:after {
   background-color: #fff;
 }
+/* desktop media */
+@media (min-width: 992px) {
+  .row {
+    --bs-gutter-x: 3rem;
+  }
+}
+
 </style>

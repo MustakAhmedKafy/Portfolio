@@ -134,13 +134,20 @@ function eraseText() {
 </template>
 
 <style scoped>
-.navbar img{
+.navbar img {
   width: 100px;
+}
+.navbar button {
+  border: 0px;
+}
+.navbar button:focus {
+  box-shadow: none;
 }
 .navbar-nav .nav-link {
   padding: 0.5rem 1rem;
   position: relative;
   font-size: 17px;
+  display: inline;
 }
 .nav-link {
   padding: 0px !important;

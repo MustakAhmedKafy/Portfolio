@@ -13,40 +13,34 @@ const description = ref(
 
 const cards = ref([
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 1",
-    description: "Lorem ipsum description examples.",
-    url: "https://source.unsplash.com/1600x900/?background",
+    imageUrl: "yc.jpg",
+    title: "YC Consultansy",
+    url: "https://ycconsulting.us/",
   },
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 2",
-    description: "Lorem ipsum description examples.",
-    url: "#",
+    imageUrl: "mechanic.jpg",
+    title: "Mechanic Mate",
+    url: "http://mechanic.mustakkafy.com/",
   },
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 3",
-    description: "Lorem ipsum description examples.",
-    url: "#",
+    imageUrl: "techforing.jpg",
+    title: "Tech Foring",
+    url: "http://techforing.mustakkafy.com/",
   },
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 3",
-    description: "Lorem ipsum description examples.",
-    url: "#",
+    imageUrl: "hexatech.jpg",
+    title: "Hexa Tech",
+    url: "https://hexatech.com.bd/",
   },
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 3",
-    description: "Lorem ipsum description examples.",
-    url: "#",
+    imageUrl: "loginpage.png",
+    title: "Login Page",
+    url: "https://mustakahmedkafy.github.io/loginPage/",
   },
   {
-    imageUrl: "https://source.unsplash.com/1600x900/?background",
-    title: "Title Examples 3",
-    description: "Lorem ipsum description examples.",
-    url: "#",
+    imageUrl: "bookstore.png",
+    title: "Comic Bookstore",
+    url: "https://bookstore.wnw.one/",
   },
 ]);
 </script>
@@ -84,9 +78,9 @@ const cards = ref([
                     <i class="fa-solid fa-link"></i>
                   </div>
                 </div>
-                <div class="newsCaption-content d-flex">
+                <!-- <div class="newsCaption-content d-flex">
                   <span class="col-10 py-2 px-0">{{ card.description }}</span>
-                </div>
+                </div> -->
                 <Button :link="button2.url" :buttonText="button2.text"></Button>
               </div>
               <span class="overlay"></span>
@@ -164,12 +158,12 @@ figure img {
 .newsCaption {
   position: absolute;
   top: auto;
-  bottom: 31px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 35%;
   z-index: 10;
-  padding: 15px;
+  padding: 40px 15px;
   transform: translateY(80%);
   backface-visibility: hidden;
   transition: transform 0.4s;
@@ -207,12 +201,6 @@ figure img {
   transform: translateY(0);
 }
 
-.row {
-  --bs-gutter-x: 3rem;
-}
-
-
-
 @media (max-width: 991px) {
   .news-Slide-up:hover .overlay {
     background: rgb(12, 99, 107);
@@ -226,6 +214,12 @@ figure img {
 
   .news-Slide-up:hover .newsCaption {
     transform: translateY(0);
+  }
+}
+/* desktop media */
+@media (min-width: 992px) {
+  .row {
+    --bs-gutter-x: 3rem;
   }
 }
 </style>
