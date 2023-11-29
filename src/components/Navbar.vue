@@ -3,6 +3,7 @@ import { ref, onMounted } from "vue";
 // import HelloWorld from "./HelloWorld.vue";
 
 const activeLink = ref(0);
+const myLogo = "logo.png";
 
 const navLinks = [
   { label: "Home", key: "index.html" },
@@ -77,9 +78,9 @@ function eraseText() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container d-flex align-items-center">
-      <a class="navbar-brand" href="#">MustaKafy</a>
+      <a class="navbar-brand" href="#"><img :src="myLogo" alt="logo" /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -133,6 +134,9 @@ function eraseText() {
 </template>
 
 <style scoped>
+.navbar img{
+  width: 100px;
+}
 .navbar-nav .nav-link {
   padding: 0.5rem 1rem;
   position: relative;

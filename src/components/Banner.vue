@@ -2,7 +2,7 @@
 import Button from "./Button.vue";
 import { ref, onMounted } from "vue";
 const button1 = {
-  link: "#",
+  link: "https://drive.google.com/file/d/1o1KumgoqVt3frGD4_d0aOkWU1zEnlUg7/view?usp=sharing",
   text: "Download CV",
 };
 
@@ -82,7 +82,6 @@ function eraseText() {
                 <h2>{{ typedText }}</h2>
               </div>
               <Button :link="button1.link" :buttonText="button1.text"></Button>
-            
             </div>
           </div>
         </div>

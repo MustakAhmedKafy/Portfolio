@@ -83,12 +83,16 @@ const services = ref([
 </template>
 
 <style scoped>
+.row {
+  --bs-gutter-x: 3rem;
+}
+
 .section-services .single-service {
   position: relative;
   margin-top: 30px;
   background-color: rgba(242, 242, 242, 5);
   border-radius: 10px;
-  padding: 40px 30px;
+  padding: 20px;
   overflow: hidden;
 }
 

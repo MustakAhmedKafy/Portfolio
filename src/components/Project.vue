@@ -68,7 +68,7 @@ const cards = ref([
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="col-lg-4 col-md-6 col-sm-12"
+          class="col-lg-4 col-md-6 col-sm-12 mt-3"
         >
           <a :href="card.url" class="url-box">
             <figure class="newsCard news-Slide-up">
@@ -191,7 +191,7 @@ figure img {
   transition: opacity 0.15s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
-.news-Slide-up:hover .overlay {
+.news-Slide-up .overlay {
   background: rgb(12, 99, 107);
   /* background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
   background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%); */
@@ -203,17 +203,29 @@ figure img {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
 }
 
-.news-Slide-up:hover .newsCaption {
+.news-Slide-up .newsCaption {
   transform: translateY(0);
 }
 
-/* .row {
-  --bs-gutter-x: 8rem;
+.row {
+  --bs-gutter-x: 3rem;
 }
 
-@media (max-width: 768px) {
-  .row {
-    --bs-gutter-x: -3rem;
+
+
+@media (max-width: 991px) {
+  .news-Slide-up:hover .overlay {
+    background: rgb(12, 99, 107);
+    background: linear-gradient(
+      0deg,
+      rgba(47, 200, 189, 1) 0%,
+      rgba(12, 99, 107, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
   }
-} */
+
+  .news-Slide-up:hover .newsCaption {
+    transform: translateY(0);
+  }
+}
 </style>

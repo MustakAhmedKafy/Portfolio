@@ -1,3 +1,21 @@
+<script setup>
+import { ref } from "vue";
+const title = ref("Introducing Myself");
+// const description = ref(
+//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
+// );
+// const imageUrl = "@assets/mustak-8.jpg";
+const name = "Mustak Ahmed Kafy";
+const occupation = "Frontend Developer";
+const email = "ahmedmustak99@gmail.com";
+const phone = "+880-1712604506";
+const location = "Rajshahi, Bangladesh";
+const myPhoto = "kafy.jpg";
+const speech =
+  "Hi! I am Mustak Ahmed Kafy. I am professional Frontend Developer with 3 years of experience. Web design is my passion. I do my job passionately & dedicatedly. I try to do my project with no errors & greater efficiency. I can code all day long. I rarely feel bored and can't rest untill my code is complete. I can adapt to anything quickly and am very sincere. I belive in working hard and fullfilling my responsibilities.";
+</script>
+
+
 <template>
   <section class="about py-5" id="about">
     <div class="justify-content-center text-center">
@@ -53,22 +71,6 @@
     </div>
   </section>
 </template>
-<script setup>
-import { ref } from "vue";
-const title = ref("Introducing Myself");
-// const description = ref(
-//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
-// );
-// const imageUrl = "@assets/mustak-8.jpg";
-const name = "Mustak Ahmed Kafy";
-const occupation = "Frontend Developer";
-const email = "ahmedmustak99@gmail.com";
-const phone = "+880-1712604506";
-const location = "Rajshahi, Bangladesh";
-const myPhoto = "kafy.jpg";
-const speech =
-  "Hi! I am Mustak Ahmed Kafy. I am professional Frontend Developer with 3 years of experience. Web design is my passion. I do my job passionately & dedicatedly. I try to do my project with no errors & greater efficiency. I can code all day long. I rarely feel bored and can't rest untill my code is complete. I can adapt to anything quickly and am very sincere. I belive in working hard and fullfilling my responsibilities.";
-</script>
 
 <style>
 .hr-line {

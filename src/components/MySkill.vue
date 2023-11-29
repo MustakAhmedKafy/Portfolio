@@ -44,7 +44,7 @@ const skills = ref([
           :key="index"
           class="col-lg-2 col-md-4 col-6 mt-3"
         >
-          <div class="text-center p-3 border rounded bg-light shadow">
+          <div class="text-center p-3 border rounded bg-light shadow-sm">
             <img :src="skill.icon" alt="" />
             <h6 class="mt-2">{{ skill.name }}</h6>
           </div>
