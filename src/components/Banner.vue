@@ -11,7 +11,7 @@ const button1 = {
 //   text: "Button 2",
 // };
 
-const title = "I am Mustak Ahmed";
+const title = "I am Mustak Ahmed Kafy";
 // text type
 const textsToType = [
   "Frontend Developer",
@@ -76,8 +76,8 @@ function eraseText() {
         <div class="overlay-itro"></div>
         <div class="intro-content display-table">
           <div class="table-cell inner-header flex">
-            <div class="container">
-              <h1 class="intro-title mb-4">{{ title }}</h1>
+            <div class="container pt-3">
+              <h1 class="intro-title mb-4 mt-5 pt-5 display-4">{{ title }}</h1>
               <div style="height: 70px">
                 <h2>{{ typedText }}</h2>
               </div>
@@ -137,12 +137,6 @@ function eraseText() {
 </template>
 
 <style scoped>
-h1 {
-  font-family: "Dancing Script", sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
-  font-size: 48px;
-}
 p {
   font-family: "Lato", sans-serif;
   letter-spacing: 1px;
@@ -217,19 +211,7 @@ p {
     transform: translate3d(85px, 0, 0);
   }
 }
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-  .content {
-    height: 30vh;
-  }
-  h1 {
-    font-size: 24px;
-  }
-}
+
 
 .display-table {
   width: 100%;
@@ -253,11 +235,11 @@ p {
   position: absolute;
 }
 
-.intro .intro-title {
+/* .intro .intro-title {
   color: #fff;
   font-weight: 600;
   font-size: 4rem;
-}
+} */
 
 .intro .intro-subtitle {
   font-size: 2rem;
@@ -297,6 +279,22 @@ p {
   }
   100% {
     transform: translateY(0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-family: "Dancing Script", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 50px;
   }
 }
 </style>
