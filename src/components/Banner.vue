@@ -143,6 +143,9 @@ p {
   font-size: 14px;
   color: #333333;
 }
+h1{
+  font-weight: 600;
+}
 
 .header {
   position: relative;
@@ -211,7 +214,6 @@ p {
     transform: translate3d(85px, 0, 0);
   }
 }
-
 
 .display-table {
   width: 100%;
@@ -292,9 +294,15 @@ p {
   }
   h1 {
     font-family: "Dancing Script", sans-serif;
-    font-weight: 500;
     letter-spacing: 2px;
     font-size: 50px;
   }
 }
+
+/* desktop area only */
+/* @media (min-width: 992px) {
+  h1 {
+    font-weight: 600;
+  }
+} */
 </style>

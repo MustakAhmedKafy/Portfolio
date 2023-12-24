@@ -17,12 +17,14 @@ const skills = ref([
   { icon: "./skill_icon/jquery.png", name: "jQuery" },
   { icon: "./skill_icon/vuetify.svg", name: "Vuetify" },
   { icon: "./skill_icon/antDesign.png", name: "Ant Design" },
+  { icon: "./skill_icon/wordpress.png", name: "Wordpress" },
   { icon: "./skill_icon/php.png", name: "PHP" },
   { icon: "./skill_icon/mysql.png", name: "My SQL" },
   { icon: "./skill_icon/git.png", name: "Git" },
   { icon: "./skill_icon/github.png", name: "Git Hub" },
   { icon: "./skill_icon/MSoffice.png", name: "MS Office" },
   { icon: "./skill_icon/filmora.png", name: "Video Editing" },
+  { icon: "./skill_icon/photoshop.png", name: "Adobe Photoshop" },
   // Add other skills here...
 ]);
 </script>
