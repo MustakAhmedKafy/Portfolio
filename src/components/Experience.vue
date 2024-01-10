@@ -9,7 +9,7 @@ const description = ref(
 
 <template>
   <!-- Nav tabs -->
-  <div class="timeline mt-5" id="experience">
+  <div class="timeline py-5" id="experience">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">
@@ -177,7 +177,6 @@ const description = ref(
 <style scoped>
 .title {
   position: relative;
-  margin-top: 30px;
   width: 100%;
   text-align: center;
 }
@@ -185,7 +184,7 @@ const description = ref(
 .timeline {
   position: relative;
   width: 100%;
-  padding: 30px 0;
+  background-color: rgba(242, 242, 242, 5);
 }
 
 .timeline .timeline-container {

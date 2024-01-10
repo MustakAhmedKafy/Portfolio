@@ -1,5 +1,5 @@
 <template>
-  <section class="photography" id="photography">
+  <section class="photography pt-5 pb-5" id="photography">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-10 col-lg-8">
@@ -89,7 +89,14 @@ onMounted(() => {
 </script>
 
 <style lang="css" scoped>
+
 @import "lightgallery/css/lightgallery.css";
 @import "lightgallery/css/lg-thumbnail.css";
 @import "lightgallery/css/lg-zoom.css";
+</style>
+<style>
+#photography{
+  background-color: rgba(242, 242, 242, 5);
+}
+
 </style>

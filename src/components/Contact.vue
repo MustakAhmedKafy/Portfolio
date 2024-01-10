@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm.vue";
 import Social from "./Social.vue";
 
 const title = ref("Say Hello");
-
+const currentYear = ref(new Date().getFullYear());
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const title = ref("Say Hello");
     <footer class="py-3 mt-5">
       <div class="container">
         <h6 class="text-center text-white">
-          &#169;Copyright 2023 mustakkafy.com All RightReserved.
+          &#169;Copyright {{ currentYear }} mustakkafy.com All Right Reserved.
         </h6>
       </div>
     </footer>
