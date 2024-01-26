@@ -13,34 +13,34 @@ const description = ref(
 
 const cards = ref([
   {
-    imageUrl: "yc.jpg",
-    title: "YC Consultansy",
-    url: "https://ycconsulting.us/",
+    imageUrl: "img/epos.png",
+    title: "Epos Choice",
+    url: "https://eposchoice.co.uk/",
   },
   {
-    imageUrl: "mechanic.jpg",
+    imageUrl: "img/mechanic.jpg",
     title: "Mechanic Mate",
     url: "http://mechanic.mustakkafy.com/",
   },
   {
-    imageUrl: "techforing.jpg",
+    imageUrl: "img/techforing.jpg",
     title: "Tech Foring",
     url: "http://techforing.mustakkafy.com/",
   },
   {
-    imageUrl: "hexatech.jpg",
+    imageUrl: "img/hexatech.jpg",
     title: "Hexa Tech",
     url: "https://hexatech.com.bd/",
   },
   {
-    imageUrl: "loginpage.png",
+    imageUrl: "img/loginpage.png",
     title: "Login Page",
     url: "https://mustakahmedkafy.github.io/loginPage/",
   },
   {
-    imageUrl: "bookstore.png",
-    title: "Comic Bookstore",
-    url: "https://bookstore.wnw.one/",
+    imageUrl: "img/dashboard.png",
+    title: "Ant Vue Dashboard",
+    url: "https://ant-dashboard.mustakkafy.com/",
   },
 ]);
 </script>

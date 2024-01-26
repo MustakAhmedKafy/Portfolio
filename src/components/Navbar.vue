@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 // import HelloWorld from "./HelloWorld.vue";
 
 const activeLink = ref(0);
-const myLogo = "logo.png";
+const myLogo = "img/logo.png";
 
 const navLinks = [
   { label: "Home", key: "index.html" },

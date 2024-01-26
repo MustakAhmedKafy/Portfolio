@@ -26,9 +26,32 @@ const description = ref(
               <p><i class="fa fa-briefcase"></i></p>
             </div>
             <div class="timeline-continue">
+              <div class="row timeline-left">
+                <div class="col-md-6 d-md-none d-block">
+                  <p class="timeline-date">December 06, 2023 – Continuing</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="timeline-box">
+                    <div class="timeline-icon d-md-none d-block">
+                      <p><i class="fa fa-briefcase"></i></p>
+                    </div>
+                    <div class="timeline-text">
+                      <h3>Frontend Developer</h3>
+                      <p>Yuma Technology</p>
+                    </div>
+                    <div class="timeline-icon d-md-block d-none">
+                      <i class="fa fa-briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-md-block d-none">
+                  <p class="timeline-date">December 06, 2023 – Continuing</p>
+                </div>
+              </div>
+
               <div class="row timeline-right">
                 <div class="col-md-6">
-                  <p class="timeline-date">August 13, 2023–Continuing</p>
+                  <p class="timeline-date">August 13, 2023 – November 30, 2023</p>
                 </div>
                 <div class="col-md-6">
                   <div class="timeline-box">
@@ -75,7 +98,7 @@ const description = ref(
               </div>
               <div class="row timeline-right">
                 <div class="col-md-6">
-                  <p class="timeline-date">May 10, 2022 –March 8, 2023</p>
+                  <p class="timeline-date">May 10, 2022 – March 8, 2023</p>
                 </div>
                 <div class="col-md-6">
                   <div class="timeline-box">

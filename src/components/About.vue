@@ -10,7 +10,7 @@ const occupation = "Frontend Developer";
 const email = "ahmedmustak99@gmail.com";
 const phone = "+880-1712604506";
 const location = "Rajshahi, Bangladesh";
-const myPhoto = "kafy.jpg";
+const myPhoto = "img/kafy.jpg";
 const speech =
   "Hi! I am Mustak Ahmed Kafy. I am professional Frontend Developer with 3 years of experience. Web design is my passion. I do my job passionately & dedicatedly. I try to do my project with no errors & greater efficiency. I can code all day long. I rarely feel bored and can't rest untill my code is complete. I can adapt to anything quickly and am very sincere. I belive in working hard and fullfilling my responsibilities.";
 </script>
@@ -22,7 +22,7 @@ const speech =
       <div class="col-md-12">
         <div class="header-section">
           <h2 class="title">{{ title }}</h2>
-          <p class="description">{{ description }}</p>
+          <!-- <p class="description">{{ description }}</p> -->
         </div>
       </div>
     </div>
