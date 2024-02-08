@@ -41,7 +41,7 @@ onMounted(() => {
   <div class="button_container">
     <div class="button_su rounded-pill">
       <span class="su_button_circle"> </span>
-      <a :href="link" class="button_su_inner">
+      <a :href="link" class="button_su_inner" target="_blank">
         <span class="button_text_container">{{ buttonText }}</span>
       </a>
     </div>

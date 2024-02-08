@@ -2,7 +2,7 @@
 import Button from "./Button.vue";
 import { ref, onMounted } from "vue";
 const button1 = {
-  link: "https://drive.google.com/file/d/1o1KumgoqVt3frGD4_d0aOkWU1zEnlUg7/view?usp=sharing",
+  link: "https://drive.google.com/file/d/13HKvn3ibHvXWmv8_11HKm12_7gHJSNEV/view?usp=sharing",
   text: "Download CV",
 };
 
@@ -143,7 +143,7 @@ p {
   font-size: 14px;
   color: #333333;
 }
-h1{
+h1 {
   font-weight: 600;
 }
 
