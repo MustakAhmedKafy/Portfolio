@@ -154,7 +154,7 @@ const services = ref([
 
 .section-services .single-service .description {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 16px;
   transition: color 0.3s;
 }
 

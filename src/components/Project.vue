@@ -30,7 +30,7 @@ const cards = ref([
   {
     imageUrl: "img/hexatech.jpg",
     title: "Hexa Tech",
-    url: "https://hexatech.com.bd/",
+    url: "https://mustakahmedkafy.github.io/IOMatrix/",
   },
   {
     imageUrl: "img/loginpage.png",

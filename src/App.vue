@@ -37,9 +37,11 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
 }
-p{
+p {
   font-weight: 500;
   font-size: 16px;
+  color: #282828;
+  opacity: 0.9;
 }
 
 @media (max-width: 767px) {
@@ -87,5 +89,6 @@ p{
 .header-section .description {
   font-size: 16px;
   color: #282828;
+  opacity: 0.9;
 }
 </style>
