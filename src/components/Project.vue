@@ -13,7 +13,7 @@ const description = ref(
 
 const cards = ref([
   {
-    imageUrl: "img/epos.png",
+    imageUrl: "img/epos.jpg",
     title: "Epos Choice",
     url: "https://eposchoice.co.uk/",
   },
@@ -33,9 +33,9 @@ const cards = ref([
     url: "https://mustakahmedkafy.github.io/IOMatrix/",
   },
   {
-    imageUrl: "img/loginpage.png",
-    title: "Login Page",
-    url: "https://mustakahmedkafy.github.io/loginPage/",
+    imageUrl: "img/grocery.jpg",
+    title: "Alislah Grocery Shop",
+    url: "https://grocery.yumaapp.uk/index.html",
   },
   {
     imageUrl: "img/dashboard.png",
@@ -64,7 +64,7 @@ const cards = ref([
           :key="index"
           class="col-lg-4 col-md-6 col-sm-12 mt-3"
         >
-          <a :href="card.url" class="url-box">
+          <a :href="card.url" class="url-box" target="_blank">
             <figure class="newsCard news-Slide-up">
               <img :src="card.imageUrl" />
               <div class="newsCaption px-4">
