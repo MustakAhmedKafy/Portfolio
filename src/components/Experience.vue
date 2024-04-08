@@ -293,7 +293,7 @@ const description = ref(
   display: inline-block;
   margin: 15px;
   padding: 20px;
-  border: 1px solid #dddddd;
+  /* border: 1px solid #dddddd; */
   border-radius: 6px;
   background: #ffffff;
   width: 305px;
@@ -343,7 +343,7 @@ const description = ref(
 .timeline .timeline-box::before {
   top: 25px;
   border-color: transparent transparent transparent #dddddd;
-  border-width: 11px;
+  border-width: 0px;
 }
 
 .timeline .row.timeline-right .timeline-box::after {
@@ -432,7 +432,7 @@ const description = ref(
   }
 
   .timeline .row.timeline-left .timeline-box::after {
-    left: -20px;
+    left: -19px;
     border-color: transparent #ffffff transparent transparent;
   }
 

@@ -4,24 +4,34 @@ import emailjs from "@emailjs/browser";
 export default {
   methods: {
     sendEmail() {
-      // Assuming you have a form with a ref named "form" in your template
-      console.log(this.$refs.form);
-
       emailjs
         .sendForm(
           "service_315rfeo",
           "template_hh12u02",
-          this.$refs.form, // Make sure the ref name matches your actual ref
+          this.$refs.form,
           "4m1F6EabZqZnRTssE"
         )
         .then(
           (result) => {
             console.log("SUCCESS!", result.text);
+            // Show success message
+            alert("Message sent successfully!");
+            // Clear form fields
+            this.clearForm();
           },
           (error) => {
             console.log("FAILED...", error.text);
+            // Show error message
+            alert("Failed to send message. Please try again later.");
           }
         );
+    },
+    clearForm() {
+      // Clear form fields
+      const form = this.$refs.form;
+      form.user_name.value = "";
+      form.user_email.value = "";
+      form.message.value = "";
     },
   },
 };
