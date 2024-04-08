@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Button from "./Button.vue";
 
 const button2 = {
@@ -13,24 +13,20 @@ const description = ref(
 
 const cards = ref([
   {
-    imageUrl: "img/epos.jpg",
-    title: "Epos Choice",
-    url: "https://eposchoice.co.uk/",
+    imageUrl: "img/munchkin.jpg",
+    title: "Munchkin Nursery School",
+    url: "https://mustakkafy.com/munchkin_school/",
   },
+  {
+    imageUrl: "img/epos_choice.jpg",
+    title: "EPOS Choice",
+    url: "https://mustakkafy.com/epos_choice/",
+  },
+
   {
     imageUrl: "img/mechanic.jpg",
     title: "Mechanic Mate",
     url: "http://mechanic.mustakkafy.com/",
-  },
-  {
-    imageUrl: "img/techforing.jpg",
-    title: "Tech Foring",
-    url: "http://techforing.mustakkafy.com/",
-  },
-  {
-    imageUrl: "img/hexatech.jpg",
-    title: "Hexa Tech",
-    url: "https://mustakahmedkafy.github.io/IOMatrix/",
   },
   {
     imageUrl: "img/grocery.jpg",
@@ -38,11 +34,77 @@ const cards = ref([
     url: "https://grocery.yumaapp.uk/index.html",
   },
   {
+    imageUrl: "img/carehome.jpg",
+    title: "Care Home Dashboard",
+    url: "https://carehome.yumaapp.uk/",
+  },
+  {
+    imageUrl: "img/realestate.jpg",
+    title: "Real Estate Website",
+    url: "https://mustakahmedkafy.github.io/RealEstate/",
+  },
+  {
+    imageUrl: "img/techforing.jpg",
+    title: "Tech Foring",
+    url: "http://techforing.mustakkafy.com/",
+  },
+
+  {
+    imageUrl: "img/healthcare.jpg",
+    title: "Healthcare website",
+    url: "https://healthcare.yumaapp.uk/",
+  },
+
+  {
+    imageUrl: "img/carpetshop.jpg",
+    title: "Carpet Shop website",
+    url: "https://carpetshop.yumaapp.uk/",
+  },
+  {
     imageUrl: "img/dashboard.png",
     title: "Ant Vue Dashboard",
     url: "https://ant-dashboard.mustakkafy.com/",
   },
+
+  {
+    imageUrl: "img/hexatech.jpg",
+    title: "Hexa Tech",
+    url: "https://mustakahmedkafy.github.io/IOMatrix/",
+  },
+
+  {
+    imageUrl: "img/epos.jpg",
+    title: "Epos Choice Wordpress",
+    url: "https://eposchoice.co.uk/",
+  },
 ]);
+
+const currentPage = ref(1);
+const cardsPerPage = 6;
+
+const totalPages = computed(() => Math.ceil(cards.length / cardsPerPage));
+
+const paginatedCards = computed(() => {
+  const startIndex = (currentPage.value - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  return cards.value.slice(startIndex, endIndex);
+});
+
+function previousPage() {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+}
+
+function nextPage() {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+}
+
+function changePage(pageNumber) {
+  currentPage.value = pageNumber;
+}
 </script>
 
 <template>
@@ -88,6 +150,8 @@ const cards = ref([
           </a>
         </div>
       </div>
+      <!-- Pagination -->
+   
     </div>
   </section>
 </template>
