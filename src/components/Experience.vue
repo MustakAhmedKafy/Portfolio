@@ -207,7 +207,7 @@ const description = ref(
 .timeline {
   position: relative;
   width: 100%;
-  background-color: rgba(242, 242, 242, 5);
+  background-color: #f0f2f4;
 }
 
 .timeline .timeline-container {

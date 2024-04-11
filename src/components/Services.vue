@@ -87,7 +87,7 @@ const services = ref([
 .section-services .single-service {
   position: relative;
   margin-top: 30px;
-  background-color: rgba(242, 242, 242, 5);
+  background-color: #f0f2f4;
   border-radius: 10px;
   padding: 20px;
   overflow: hidden;

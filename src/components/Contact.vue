@@ -39,7 +39,7 @@ const currentYear = ref(new Date().getFullYear());
 
 <style scoped>
 .say-hello {
-  background-color: #f5f5f5;
+  background-color: #f0f2f4;
 }
 footer {
   background-color: #0f6d73;

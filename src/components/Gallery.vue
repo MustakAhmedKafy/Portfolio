@@ -96,7 +96,7 @@ onMounted(() => {
 </style>
 <style>
 #photography{
-  background-color: rgba(242, 242, 242, 5);
+  background-color: #f0f2f4;
 }
 
 </style>

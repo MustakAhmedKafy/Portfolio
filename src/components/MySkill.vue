@@ -46,7 +46,7 @@ const skills = ref([
           :key="index"
           class="col-lg-2 col-md-4 col-6 mt-3"
         >
-          <div class="text-center p-3 border rounded bg-light shadow-sm">
+          <div class="text-center p-3 rounded bg-light shadow-sm">
             <img :src="skill.icon" alt="" />
             <h6 class="mt-2">{{ skill.name }}</h6>
           </div>
@@ -61,7 +61,7 @@ const skills = ref([
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8) !important;
 }
 .skill {
-  background-color: rgba(242, 242, 242, 5);
+  background-color: #f0f2f4;
 }
 .skill img {
   width: 100%;
