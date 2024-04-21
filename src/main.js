@@ -7,4 +7,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 //  window.$ = require("jquery");
 //  window.JQuery = require("jquery");
 
-createApp(App).mount("#app");
+// pagination
+import VueAwesomePaginate from "vue-awesome-paginate";
+
+import "vue-awesome-paginate/dist/style.css";
+
+// createApp(App).mount("#app");
+createApp(App).use(VueAwesomePaginate).mount("#app");

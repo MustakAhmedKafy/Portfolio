@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import Button from "./Button.vue";
 
 const button2 = {
@@ -11,7 +11,7 @@ const description = ref(
   "Here showcases a collection of my frontend development work, demonstrating my proficiency in creating responsive, visually appealing websites with clean code and intuitive user interfaces. Explore my projects and witness the power of clean code and innovative design."
 );
 
-const cards = ref([
+const cards = [
   {
     imageUrl: "img/munchkin.jpg",
     title: "Munchkin Nursery School",
@@ -77,34 +77,24 @@ const cards = ref([
     title: "Epos Choice Wordpress",
     url: "https://eposchoice.co.uk/",
   },
-]);
+];
+
+const shortedCard = ref([]);
+
+const perPage = 6;
 
 const currentPage = ref(1);
-const cardsPerPage = 6;
-
-const totalPages = computed(() => Math.ceil(cards.length / cardsPerPage));
-
-const paginatedCards = computed(() => {
-  const startIndex = (currentPage.value - 1) * cardsPerPage;
-  const endIndex = startIndex + cardsPerPage;
-  return cards.value.slice(startIndex, endIndex);
+const onClickHandler = (page) => {
+  currentPage.value = page;
+  shortedCard.value = cards.slice(
+    6 * (+currentPage.value - 1),
+    6 * currentPage.value
+  );
+  console.log(currentPage);
+};
+onMounted(() => {
+  onClickHandler(currentPage.value);
 });
-
-function previousPage() {
-  if (currentPage.value > 1) {
-    currentPage.value--;
-  }
-}
-
-function nextPage() {
-  if (currentPage.value < totalPages.value) {
-    currentPage.value++;
-  }
-}
-
-function changePage(pageNumber) {
-  currentPage.value = pageNumber;
-}
 </script>
 
 <template>
@@ -122,7 +112,7 @@ function changePage(pageNumber) {
       <div class="row">
         <!-- CARD 1-->
         <div
-          v-for="(card, index) in cards"
+          v-for="(card, index) in shortedCard"
           :key="index"
           class="col-lg-4 col-md-6 col-sm-12 mt-3"
         >
@@ -151,7 +141,14 @@ function changePage(pageNumber) {
         </div>
       </div>
       <!-- Pagination -->
-   
+      <vue-awesome-paginate
+        :total-items="12"
+        :items-per-page="6"
+        :max-pages-shown="5"
+        v-model="currentPage"
+        :on-click="onClickHandler"
+        
+      />
     </div>
   </section>
 </template>
@@ -286,4 +283,5 @@ figure img {
     --bs-gutter-x: 3rem;
   }
 }
+
 </style>
