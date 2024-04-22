@@ -141,14 +141,26 @@ onMounted(() => {
         </div>
       </div>
       <!-- Pagination -->
-      <vue-awesome-paginate
-        :total-items="12"
-        :items-per-page="6"
-        :max-pages-shown="5"
-        v-model="currentPage"
-        :on-click="onClickHandler"
-        
-      />
+      <div class="mt-3 text-end">
+        <vue-awesome-paginate
+          :total-items="12"
+          :items-per-page="6"
+          :max-pages-shown="5"
+          v-model="currentPage"
+          :on-click="onClickHandler"
+        >
+          <template #prev-button>
+            <span>
+              <i class="fa-solid fa-angle-left"></i>
+            </span>
+          </template>
+          <template #next-button>
+            <span>
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </template>
+        </vue-awesome-paginate>
+      </div>
     </div>
   </section>
 </template>
@@ -283,5 +295,4 @@ figure img {
     --bs-gutter-x: 3rem;
   }
 }
-
 </style>

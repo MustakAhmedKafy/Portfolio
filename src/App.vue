@@ -92,7 +92,7 @@ p {
   opacity: 0.9;
 }
 
-/* / */
+/* pagination */
 .pagination-container {
   display: flex;
   column-gap: 10px;
@@ -110,11 +110,11 @@ p {
   background-color: #d8d8d8;
 }
 .active-page {
-  background-color: #3498db;
-  border: 1px solid #3498db;
+  background-color: #0f6d73;
+  border: 1px solid #0f6d73 ;
   color: white;
 }
 .active-page:hover {
-  background-color: #2988c8;
+  background-color: #196368;
 }
 </style>
