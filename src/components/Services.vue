@@ -105,7 +105,7 @@ const services = ref([
   transform: translate(40%, -40%);
   width: 150px;
   height: 150px;
-  background-color: #0f6d73;
+  background-color: #714fa1;
   border: 6px solid #a6a6a6;
   border-radius: 50%;
   opacity: 0.8;
@@ -127,7 +127,7 @@ const services = ref([
   margin-bottom: 26px;
   width: 70px;
   height: 70px;
-  background-color: #0f6d73;
+  background-color: #714fa1;
   border-radius: 5px;
   line-height: 70px;
   text-align: center;
@@ -138,7 +138,7 @@ const services = ref([
 
 .section-services .single-service:hover .icon {
   background-color: #fff;
-  color: #0f6d73;
+  color: #714fa1;
 }
 
 .section-services .single-service .title {
@@ -182,7 +182,7 @@ const services = ref([
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #0f6d73;
+  background-color: #714fa1;
   transition: background-color 0.3s;
 }
 

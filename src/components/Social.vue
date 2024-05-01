@@ -143,7 +143,7 @@ a.socialIcon:hover,
 }
 
 .social-network a {
-  background-color: #0f6d73;
+  background-color: #714fa1;
   /* replace with your primary color value */
 }
 </style>

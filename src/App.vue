@@ -70,7 +70,7 @@ p {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: #0f6d73;
+  background-color: rgb(96, 67, 137);
   border-radius: 3px;
 }
 
@@ -82,7 +82,7 @@ p {
   transform: translateX(30px);
   width: 10px;
   height: 3px;
-  background-color: rgb(54, 218, 204);
+  background-color: rgb(147, 117, 189);
   border-radius: 3px;
 }
 
@@ -110,11 +110,11 @@ p {
   background-color: #d8d8d8;
 }
 .active-page {
-  background-color: #0f6d73;
-  border: 1px solid #0f6d73 ;
+  background-color: #714fa1;
+  border: 1px solid #714fa1 ;
   color: white;
 }
 .active-page:hover {
-  background-color: #196368;
+  background-color: #604389;
 }
 </style>

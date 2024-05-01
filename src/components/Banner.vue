@@ -2,7 +2,7 @@
 import Button from "./Button.vue";
 import { ref, onMounted } from "vue";
 const button1 = {
-  link: "https://drive.google.com/file/d/13HKvn3ibHvXWmv8_11HKm12_7gHJSNEV/view?usp=sharing",
+  link: "https://github.com/MustakAhmedKafy/cv.git",
   text: "Download CV",
 };
 
@@ -150,7 +150,7 @@ h1 {
 .header {
   position: relative;
   text-align: center;
-  background: linear-gradient(60deg, rgb(54, 218, 204) 0%, rgb(8, 88, 98) 100%);
+  background: linear-gradient(60deg, rgb(161, 135, 197) 0%, rgb(84, 59, 120) 100%);
   color: white;
 }
 

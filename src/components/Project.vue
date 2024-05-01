@@ -184,7 +184,7 @@ onMounted(() => {
   height: 35px;
   background: #fff;
   font-size: 16px;
-  color: #0c636b;
+  color: #714fa1;
   margin-right: 10px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -215,7 +215,7 @@ figure img {
 }
 
 .overlay {
-  background: rgb(12, 99, 107);
+  background: rgb(113, 79, 161);
   background: -moz-linear-gradient(
     0deg,
     rgba(40, 26, 54, 1) 0%,
@@ -228,7 +228,7 @@ figure img {
   );
   background: linear-gradient(
     0deg,
-    rgba(12, 99, 107, 1) 0%,
+    rgba(113, 79, 161, 1) 0%,
     rgba(12, 99, 107, 0) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#281a36", endColorstr="#593b74", GradientType=1);
@@ -271,12 +271,12 @@ figure img {
 }
 
 .news-Slide-up .overlay {
-  background: rgb(12, 99, 107);
+  background: rgb(113, 79, 161);
   /* background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
   background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%); */
   background: linear-gradient(
     0deg,
-    rgba(47, 200, 189, 1) 0%,
+    rgba(147, 118, 188, 1) 0%,
     rgba(12, 99, 107, 0) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
@@ -288,10 +288,10 @@ figure img {
 
 @media (max-width: 991px) {
   .news-Slide-up:hover .overlay {
-    background: rgb(12, 99, 107);
+    background: rgb(113, 79, 161);
     background: linear-gradient(
       0deg,
-      rgba(47, 200, 189, 1) 0%,
+      rgba(147, 118, 188, 1) 0%,
       rgba(12, 99, 107, 0) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);

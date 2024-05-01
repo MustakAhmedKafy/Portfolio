@@ -233,7 +233,7 @@ const description = ref(
   margin: 0;
   padding: 15px 0;
   text-align: center;
-  background: linear-gradient(#2fc8bd, #0c636b);
+  background: linear-gradient(#2fc8bd, #714fa1);
   border-radius: 100px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   color: #ffffff;
@@ -375,7 +375,7 @@ const description = ref(
 
 .timeline .timeline-icon i {
   font-size: 25px;
-  color: #0f6d73;
+  color: #714fa1;
 }
 
 .timeline .timeline-box .timeline-text {

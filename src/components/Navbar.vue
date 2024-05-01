@@ -167,7 +167,7 @@ function eraseText() {
   bottom: 0;
   width: 0; /* Initially, the line has zero width */
   height: 2px;
-  background-color: #0f6d73; /* Set your line color */
+  background-color: #714fa1 ; /* Set your line color */
   transition: width 0.3s ease; /* Add transition effect for width */
 }
 
@@ -176,7 +176,7 @@ function eraseText() {
 }
 
 .nav-link.active {
-  color: #0f6d73 !important; /* Set your active link color */
+  color: #714fa1 !important; /* Set your active link color */
   font-weight: bold;
 }
 

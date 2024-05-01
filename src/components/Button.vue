@@ -75,15 +75,16 @@ onMounted(() => {
 .button_su_inner {
   display: inline-block;
   background: #e6e6e6;
-  color: #0c636b;
+  color: #201f1f;
   font-size: 16px;
   font-weight: normal;
   text-align: center;
   border-radius: 0.375rem;
   transition: 400ms;
   text-decoration: none;
-  padding: 0.375rem 1rem;
+  padding: 6px 20px 7px 20px;
   z-index: 100000;
+  font-weight: 600;
 }
 .button_su_inner:hover {
   color: #fff;
@@ -115,7 +116,7 @@ onMounted(() => {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: #0f6d73;
+    background-color: #714fa1;
   }
 }
 
@@ -125,14 +126,14 @@ onMounted(() => {
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-    background-color: #0f6d73;
+    background-color: #714fa1;
   }
   100% {
     width: 0px;
     height: 0px;
     margin-left: 0px;
     margin-top: 0px;
-    background-color: rgba(129, 80, 108, 0.6);
+    background-color: rgba(96, 67, 137, 0.6);
   }
 }
 </style>

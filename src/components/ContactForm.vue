@@ -107,8 +107,8 @@ button {
 }
 
 .input-field .form-control:focus {
-  border-color: #0f6d73;
-  box-shadow: 0 0 0 0.08rem rgba(12, 108, 134, 0.8);
+  border-color: #714fa1;
+  box-shadow: 0 0 0 0.08rem rgba(96, 67, 137, 0.8);
 }
 
 .message .form-control {
@@ -120,8 +120,8 @@ button {
 }
 
 .message .form-control:focus {
-  border-color: #0f6d73;
-  box-shadow: 0 0 0 0.08rem rgba(12, 108, 134, 0.8);
+  border-color: #714fa1;
+  box-shadow: 0 0 0 0.08rem rgba(96, 67, 137, 0.8);
 }
 .form-control::placeholder {
   font-family: "Alegreya Sans", sans-serif;
@@ -143,25 +143,25 @@ textarea {
 
 .btn-primary {
   color: #fff;
-  background-color: #0f6d73 !important;
-  border-color: #0f6d73 !important;
+  background-color: #714fa1 !important;
+  border-color: #714fa1 !important;
   transition: 0.7s;
 }
 
 .btn-primary:hover {
   color: #fff;
   background-color: #fff !important;
-  border-color: #0f6d73 !important;
-  color: #0f6d73;
+  border-color: #714fa1 !important;
+  color: #714fa1;
   transition: 0.7s;
 }
 
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
   color: #fff;
-  background-color: #0f6d73 !important;
-  border-color: #0f6d73 !important;
-  box-shadow: 0 0 0 0.08rem rgba(12, 108, 134, 0.8);
+  background-color: #714fa1 !important;
+  border-color: #714fa1 !important;
+  box-shadow: 0 0 0 0.08rem rgba(96, 67, 137, 0.8);
 }
 
 .btn-check:active + .btn-primary,

@@ -42,6 +42,6 @@ const currentYear = ref(new Date().getFullYear());
   background-color: #f0f2f4;
 }
 footer {
-  background-color: #0f6d73;
+  background-color: #714fa1;
 }
 </style>

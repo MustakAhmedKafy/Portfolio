@@ -24,7 +24,7 @@ const speech =
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-md-12 col-lg-6 mt-5">
           <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -70,12 +70,6 @@ const speech =
 </template>
 
 <style>
-.hr-line {
-  width: 3%; /* Adjust the width of the line */
-  height: 2px; /* Adjust the thickness of the line */
-  background-color: #3498db; /* Adjust the color of the line */
-  margin: 10px auto;
-}
 
 @media (max-width: 768px) {
   .tab-margin {
@@ -85,7 +79,7 @@ const speech =
 </style>
 <style scoped>
 .bi {
-  color: #0d656c;
+  color: #714fa1 ;
 }
 .tab-margin span {
   margin-left: 3px;
