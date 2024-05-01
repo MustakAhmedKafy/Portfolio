@@ -1,20 +1,18 @@
 <script setup>
 import { ref } from "vue";
 const title = ref("Introducing Myself");
-// const description = ref(
-//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et."
-// );
-// const imageUrl = "@assets/mustak-8.jpg";
 const name = "Mustak Ahmed Kafy";
 const occupation = "Frontend Developer";
 const email = "ahmedmustak99@gmail.com";
 const phone = "+880-1712604506";
 const location = "Rajshahi, Bangladesh";
-const myPhoto = "img/mustak_ahmed_kafy.jpg";
+const myPhoto = {
+  src: "img/mustak_ahmed_kafy.jpg",
+  alt: "Mustak Ahmed Kafy",
+};
 const speech =
   "Hi! I am Mustak Ahmed Kafy. I am professional Frontend Developer with 3 years of experience. Web design is my passion. I do my job passionately & dedicatedly. I try to do my project with no errors & greater efficiency. I can code all day long. I rarely feel bored and can't rest untill my code is complete. I can adapt to anything quickly and am very sincere. I belive in working hard and fullfilling my responsibilities.";
 </script>
-
 
 <template>
   <section class="about py-5" id="about">
@@ -22,7 +20,6 @@ const speech =
       <div class="col-md-12">
         <div class="header-section">
           <h2 class="title">{{ title }}</h2>
-          <!-- <p class="description">{{ description }}</p> -->
         </div>
       </div>
     </div>
@@ -33,9 +30,9 @@ const speech =
             <div class="col-sm-12 col-md-6 col-lg-6">
               <!-- image for about -->
               <img
-                :src="myPhoto"
+                :src="myPhoto.src"
                 class="rounded float-left w-100 shadow-lg"
-                alt="My Picture"
+                :alt="myPhoto.alt"
               />
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 my-auto">

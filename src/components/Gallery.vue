@@ -25,7 +25,7 @@
           >
             <a :href="image.path">
               <img
-                :alt="'img' + (index + 1)"
+                :alt="'Photo ' + (index + 1)"
                 :src="image.path"
                 class="img-fluid"
               />
