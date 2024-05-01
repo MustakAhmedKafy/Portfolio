@@ -3,7 +3,11 @@ import { ref, onMounted } from "vue";
 // import HelloWorld from "./HelloWorld.vue";
 
 const activeLink = ref(0);
-const myLogo = "img/logo.png";
+
+const myLogo = {
+  src: "img/logo.png",
+  alt: "logo",
+};
 
 const navLinks = [
   { label: "Home", key: "index.html" },
@@ -18,7 +22,6 @@ const navLinks = [
 ];
 
 const title = "I am Mustak Ahmed";
-const cvLink = "img/myself/Mustak_Ahmed.pdf";
 
 const setActive = (index) => {
   activeLink.value = index;
@@ -80,7 +83,7 @@ function eraseText() {
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container d-flex align-items-center">
-      <a class="navbar-brand" href="#"><img :src="myLogo" alt="logo" /></a>
+      <a class="navbar-brand" href="#"><img :src="myLogo.src" :alt="myLogo.alt" /></a>
       <button
         class="navbar-toggler"
         type="button"

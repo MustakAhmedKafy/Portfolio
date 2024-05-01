@@ -16,66 +16,78 @@ const cards = [
     imageUrl: "img/munchkin.jpg",
     title: "Munchkin Nursery School",
     url: "https://mustakkafy.com/munchkin_school/",
+    alt: "Munchkin Nursery School",
   },
   {
     imageUrl: "img/epos_choice.jpg",
     title: "EPOS Choice",
     url: "https://mustakkafy.com/epos_choice/",
+    alt: "EPOS Choice",
   },
 
   {
     imageUrl: "img/mechanic.jpg",
     title: "Mechanic Mate",
     url: "http://mechanic.mustakkafy.com/",
+    alt: "Mechanic Mate",
   },
   {
     imageUrl: "img/grocery.jpg",
     title: "Alislah Grocery Shop",
     url: "https://grocery.yumaapp.uk/index.html",
+    alt: "Alislah Grocery Shop",
   },
   {
     imageUrl: "img/carehome.jpg",
     title: "Care Home Dashboard",
     url: "https://carehome.yumaapp.uk/",
+    alt: "Care Home Dashboard",
   },
   {
     imageUrl: "img/realestate.jpg",
     title: "Real Estate Website",
     url: "https://mustakahmedkafy.github.io/RealEstate/",
+    alt: "Real Estate Website",
   },
   {
     imageUrl: "img/techforing.jpg",
     title: "Tech Foring",
     url: "http://techforing.mustakkafy.com/",
+    alt: "Tech Foring",
   },
 
   {
     imageUrl: "img/healthcare.jpg",
     title: "Healthcare website",
     url: "https://healthcare.yumaapp.uk/",
+    alt: "Healthcare website",
   },
 
   {
     imageUrl: "img/carpetshop.jpg",
     title: "Carpet Shop website",
     url: "https://carpetshop.yumaapp.uk/",
+    alt: "Carpet Shop website",
   },
   {
     imageUrl: "img/dashboard.png",
     title: "Ant Vue Dashboard",
     url: "https://ant-dashboard.mustakkafy.com/",
+    alt: "Ant Vue Dashboard",
   },
 
   {
     imageUrl: "img/hexatech.jpg",
     title: "Hexa Tech",
     url: "https://mustakahmedkafy.github.io/IOMatrix/",
+    alt: "Hexa Tech",
   },
 
   {
     imageUrl: "img/epos.jpg",
     title: "Epos Choice Wordpress",
     url: "https://eposchoice.co.uk/",
+    alt: "Epos Choice Wordpress",
   },
 ];
 
@@ -118,7 +130,7 @@ onMounted(() => {
         >
           <a :href="card.url" class="url-box" target="_blank">
             <figure class="newsCard news-Slide-up">
-              <img :src="card.imageUrl" />
+              <img :src="card.imageUrl" :alt="card.alt"/>
               <div class="newsCaption px-4">
                 <div
                   class="d-flex align-items-center justify-content-between cnt-title"

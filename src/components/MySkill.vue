@@ -7,24 +7,24 @@ const description = ref(
 );
 
 const skills = ref([
-  { icon: "./skill_icon/html.png", name: "HTML" },
-  { icon: "./skill_icon/css.png", name: "CSS" },
-  { icon: "./skill_icon//sass.png", name: "SCSS" },
-  { icon: "./skill_icon/bootstrap.png", name: "Bootstrap" },
-  { icon: "./skill_icon/tailwind.png", name: "Tailwind CSS" },
-  { icon: "./skill_icon/javascript.png", name: "Javascript" },
-  { icon: "./skill_icon/vuejs.png", name: "Vue JS" },
-  { icon: "./skill_icon/jquery.png", name: "jQuery" },
-  { icon: "./skill_icon/vuetify.svg", name: "Vuetify" },
-  { icon: "./skill_icon/antDesign.png", name: "Ant Design" },
-  { icon: "./skill_icon/wordpress.png", name: "Wordpress" },
-  { icon: "./skill_icon/php.png", name: "PHP" },
-  { icon: "./skill_icon/mysql.png", name: "My SQL" },
-  { icon: "./skill_icon/git.png", name: "Git" },
-  { icon: "./skill_icon/github.png", name: "Git Hub" },
-  { icon: "./skill_icon/MSoffice.png", name: "MS Office" },
-  { icon: "./skill_icon/filmora.png", name: "Video Editing" },
-  { icon: "./skill_icon/photoshop.png", name: "Adobe Photoshop" },
+  { icon: "./skill_icon/html.png", name: "HTML", alt:"html" },
+  { icon: "./skill_icon/css.png", name: "CSS", alt:"css"},
+  { icon: "./skill_icon//sass.png", name: "SCSS", alt:"sass"},
+  { icon: "./skill_icon/bootstrap.png", name: "Bootstrap", alt:"bootstrap"},
+  { icon: "./skill_icon/tailwind.png", name: "Tailwind CSS", alt:"tailwind"},
+  { icon: "./skill_icon/javascript.png", name: "Javascript", alt:"javascript"},
+  { icon: "./skill_icon/vuejs.png", name: "Vue JS", alt:"vuejs"},
+  { icon: "./skill_icon/jquery.png", name: "jQuery", alt:"jquery"},
+  { icon: "./skill_icon/vuetify.svg", name: "Vuetify", alt:"vuetify"},
+  { icon: "./skill_icon/antDesign.png", name: "Ant Design", alt:"antDesign"},
+  { icon: "./skill_icon/wordpress.png", name: "Wordpress", alt:"wordpress"},
+  { icon: "./skill_icon/php.png", name: "PHP", alt:"php"},
+  { icon: "./skill_icon/mysql.png", name: "My SQL", alt:"mysql"},
+  { icon: "./skill_icon/git.png", name: "Git", alt:"git"},
+  { icon: "./skill_icon/github.png", name: "Git Hub", alt:"github"},
+  { icon: "./skill_icon/MSoffice.png", name: "MS Office", alt:"MSoffice"},
+  { icon: "./skill_icon/filmora.png", name: "Video Editing", alt:"filmora"},
+  { icon: "./skill_icon/photoshop.png", name: "Adobe Photoshop", alt:"photoshop"},
   // Add other skills here...
 ]);
 </script>
@@ -47,7 +47,7 @@ const skills = ref([
           class="col-lg-2 col-md-4 col-6 mt-3"
         >
           <div class="text-center p-3 rounded bg-light shadow-sm">
-            <img :src="skill.icon" alt="" />
+            <img :src="skill.icon" :alt="skill.alt" />
             <h6 class="mt-2">{{ skill.name }}</h6>
           </div>
         </div>
