@@ -299,10 +299,5 @@ h1 {
   }
 }
 
-/* desktop area only */
-/* @media (min-width: 992px) {
-  h1 {
-    font-weight: 600;
-  }
-} */
+
 </style>

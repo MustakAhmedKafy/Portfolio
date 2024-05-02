@@ -138,7 +138,7 @@ function eraseText() {
 
 <style scoped>
 .navbar img {
-  width: 100px;
+  width: 150px;
 }
 .navbar button {
   border: 0px;
