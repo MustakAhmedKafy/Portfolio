@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Banner from "./components/Banner.vue";
 import About from "./components/About.vue";
@@ -9,20 +10,38 @@ import Project from "./components/Project.vue";
 import Gallery from "./components/Gallery.vue";
 import VideoGallery from "./components/VideoGallery.vue";
 import Contact from "./components/Contact.vue";
+import Loader from "./components/Loader.vue";
+
+const isLoading = ref(true);
+
+const fetchData = () => {
+  // Simulate loading data
+  setTimeout(() => {
+    isLoading.value = false; // Set it to false when data is loaded
+  }, 5000); // Adjust time as needed
+};
+
+onMounted(() => {
+  fetchData(); // Call a method to fetch data or perform any other initialization
+});
 </script>
 
 <template>
-  <Navbar />
-  <Banner />
-  <About />
-  <MySkill />
-  <Services />
-  <Experience />
-  <Project />
-  <Gallery />
-  <VideoGallery />
-  <Contact />
+  <Loader :showLoader="isLoading" />
+  <div v-if="!isLoading">
+    <Navbar />
+    <Banner />
+    <About />
+    <MySkill />
+    <Services />
+    <Experience />
+    <Project />
+    <Gallery />
+    <VideoGallery />
+    <Contact />
+  </div>
 </template>
+
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
@@ -111,7 +130,7 @@ p {
 }
 .active-page {
   background-color: #714fa1;
-  border: 1px solid #714fa1 ;
+  border: 1px solid #714fa1;
   color: white;
 }
 .active-page:hover {
