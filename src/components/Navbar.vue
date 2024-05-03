@@ -81,9 +81,11 @@ function eraseText() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container d-flex align-items-center">
-      <a class="navbar-brand" href="#"><img :src="myLogo.src" :alt="myLogo.alt" /></a>
+      <a class="navbar-brand" href="#"
+        ><img :src="myLogo.src" :alt="myLogo.alt"
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -137,6 +139,10 @@ function eraseText() {
 </template>
 
 <style scoped>
+nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(248, 249, 250, 0.8);
+}
 .navbar img {
   width: 150px;
 }
@@ -167,7 +173,7 @@ function eraseText() {
   bottom: 0;
   width: 0; /* Initially, the line has zero width */
   height: 2px;
-  background-color: #714fa1 ; /* Set your line color */
+  background-color: #714fa1; /* Set your line color */
   transition: width 0.3s ease; /* Add transition effect for width */
 }
 
