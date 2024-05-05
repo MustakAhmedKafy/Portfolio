@@ -15,7 +15,7 @@ const speech =
 </script>
 
 <template>
-  <section class="about py-5" id="about">
+  <section class="about py-5 " id="about">
     <div class="justify-content-center text-center">
       <div class="col-md-12">
         <div class="header-section">
