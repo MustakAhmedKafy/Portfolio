@@ -51,7 +51,7 @@ const description = ref(
 
               <div class="row timeline-right">
                 <div class="col-md-6">
-                  <p class="timeline-date">August 13, 2023 – November 30, 2023</p>
+                  <p class="timeline-date">March 27, 2023 – November 30, 2023</p>
                 </div>
                 <div class="col-md-6">
                   <div class="timeline-box">
@@ -66,28 +66,7 @@ const description = ref(
                 </div>
               </div>
 
-              <div class="row timeline-left">
-                <div class="col-md-6 d-md-none d-block">
-                  <p class="timeline-date">March 27, 2023–August 10, 2023</p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon d-md-none d-block">
-                      <p><i class="fa fa-briefcase"></i></p>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Frontend Developer</h3>
-                      <p>Hexa Tech</p>
-                    </div>
-                    <div class="timeline-icon d-md-block d-none">
-                      <i class="fa fa-briefcase"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 d-md-block d-none">
-                  <p class="timeline-date">March 27, 2023–August 10, 2023</p>
-                </div>
-              </div>
+             
 
               <div class="row">
                 <div class="col-12">
@@ -116,7 +95,7 @@ const description = ref(
               <div class="row timeline-left">
                 <div class="col-md-6 d-md-none d-block">
                   <p class="timeline-date">
-                    September 10, 2021 – December 10, 2021
+                    June 10, 2021 – December 10, 2021
                   </p>
                 </div>
                 <div class="col-md-6">
@@ -125,7 +104,7 @@ const description = ref(
                       <i class="fa fa-briefcase"></i>
                     </div>
                     <div class="timeline-text">
-                      <h3>Frontend Developer Internship</h3>
+                      <h3>Frontend Developer</h3>
                       <p>Developer Experience Hub</p>
                     </div>
                     <div class="timeline-icon d-md-block d-none">
@@ -135,57 +114,11 @@ const description = ref(
                 </div>
                 <div class="col-md-6 d-md-block d-none">
                   <p class="timeline-date">
-                    September 10, 2021 – December 10, 2021
+                    June 10, 2021 – December 10, 2021
                   </p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="timeline-year">
-                    <p><i class="fa fa-briefcase"></i></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row timeline-right">
-                <div class="col-md-6">
-                  <p class="timeline-date">February 1, 2021 – July 31, 2021</p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon">
-                      <i class="fa fa-briefcase"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Trainer</h3>
-                      <p>Self Development Technical Training Institute</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row timeline-left">
-                <div class="col-md-6 d-md-none d-block">
-                  <p class="timeline-date">October 1, 2018 – March 31, 2019</p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon d-md-none d-block">
-                      <i class="fa fa-briefcase"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Web Designer</h3>
-                      <p>SATT IT</p>
-                    </div>
-                    <div class="timeline-icon d-md-block d-none">
-                      <i class="fa fa-briefcase"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 d-md-block d-none">
-                  <p class="timeline-date">October 1, 2018 – March 31, 2019</p>
-                </div>
-              </div>
+              
             </div>
             <div class="timeline-start">
               <p><i class="fa fa-briefcase"></i></p>
