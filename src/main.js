@@ -7,6 +7,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 //  window.$ = require("jquery");
 //  window.JQuery = require("jquery");
 
+import "animate.css";
+
 // pagination
 import VueAwesomePaginate from "vue-awesome-paginate";
 

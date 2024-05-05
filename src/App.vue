@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery.vue";
 import VideoGallery from "./components/VideoGallery.vue";
 import Contact from "./components/Contact.vue";
 import Loader from "./components/Loader.vue";
+import FixedComponent from "./components/FixedComponent.vue";
 
 const isLoading = ref(true);
 
@@ -39,6 +40,7 @@ onMounted(() => {
     <Gallery />
     <VideoGallery />
     <Contact />
+    <FixedComponent />
   </div>
 </template>
 

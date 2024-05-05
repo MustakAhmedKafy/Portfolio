@@ -331,6 +331,11 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.4.23.tgz#e536a6dfd2f5f950d08c2e8ebcfe7e5329a851a1"
   integrity sha512-wBQ0gvf+SMwsCQOyusNw/GoXPV47WGd1xB5A1Pgzy0sQ3Bi5r5xm3n+92y3gCnB3MWqnRDdvfkRGxhKtbBRNgg==
 
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
+
 bootstrap-icons@^1.11.3:
   version "1.11.3"
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.11.3.tgz#03f9cb754ec005c52f9ee616e2e84a82cab3084b"
