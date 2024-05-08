@@ -150,7 +150,11 @@ h1 {
 .header {
   position: relative;
   text-align: center;
-  background: linear-gradient(60deg, rgb(161, 135, 197) 0%, rgb(84, 59, 120) 100%);
+  background: linear-gradient(
+    60deg,
+    rgb(161, 135, 197) 0%,
+    rgb(84, 59, 120) 100%
+  );
   color: white;
 }
 
@@ -299,5 +303,12 @@ h1 {
   }
 }
 
-
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .content {
+    height: 30vh;
+  }
+  .intro {
+    height: 58vh;
+  }
+}
 </style>

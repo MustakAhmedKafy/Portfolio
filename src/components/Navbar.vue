@@ -186,97 +186,17 @@ nav {
   font-weight: bold;
 }
 
-/* .bg-image {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-}
-
-.display-table {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.intro {
-  height: 100vh;
-  position: relative;
-  color: #fff;
-}
-
-.intro .intro-content {
-  text-align: center;
-  position: absolute;
-}
-
-.intro .overlay-itro {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.intro .intro-title {
-  color: #fff;
-  font-weight: 600;
-  font-size: 4rem;
-}
-
-.intro .intro-subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  color: #fff;
-}
-
-.intro .text-slider-items {
-  display: none;
-}
-
-#home {
-  background-image: url(../assets/banner.jpg);
-}
-
-.intro .text-slider {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-}
-
-.intro .text-slider::after {
-  content: "";
-  display: inline-block;
-  vertical-align: text-bottom;
-  animation: showText 3s linear infinite;
-}
-
-@keyframes showText {
-  0% {
-    transform: translateY(0);
+/*only mobile area */
+@media (max-width: 768px) {
+  nav .nav-item {
+    padding: 2px 10px !important;
   }
-  25% {
-    transform: translateY(-1em);
+}
+
+/* tab area only  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav .nav-item {
+    padding: 2px 10px !important;
   }
-  50% {
-    transform: translateY(-2em);
-  }
-  75% {
-    transform: translateY(-1em);
-  }
-  100% {
-    transform: translateY(0);
-  }
-} */
+}
 </style>

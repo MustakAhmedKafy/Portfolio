@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <h3 class="mt-1">Join my social networks</h3>
+    <h4>Join my social networks</h4>
     <ul class="social-network social-circle">
       <li>
         <a

@@ -19,7 +19,7 @@ const fetchData = () => {
   // Simulate loading data
   setTimeout(() => {
     isLoading.value = false; // Set it to false when data is loaded
-  }, 5000); // Adjust time as needed
+  }, 4000); // Adjust time as needed
 };
 
 onMounted(() => {
