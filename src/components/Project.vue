@@ -14,6 +14,12 @@ const description = ref(
 const cards = [
   {
     imageUrl: "img/munchkin.jpg",
+    title: "Essense",
+    url: "#",
+    alt: "Essence e-commerse",
+  },
+  {
+    imageUrl: "img/munchkin.jpg",
     title: "Munchkin Nursery School",
     url: "https://mustakkafy.com/munchkin_school/",
     alt: "Munchkin Nursery School",
