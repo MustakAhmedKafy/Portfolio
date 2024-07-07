@@ -14,6 +14,7 @@ const skills = ref([
   { icon: "./skill_icon/tailwind.png", name: "Tailwind CSS", alt:"tailwind"},
   { icon: "./skill_icon/javascript.png", name: "Javascript", alt:"javascript"},
   { icon: "./skill_icon/vuejs.png", name: "Vue JS", alt:"vuejs"},
+  { icon: "./skill_icon/nuxt-icon.png", name: "Nuxt JS", alt:"Nuxt js"},
   { icon: "./skill_icon/jquery.png", name: "jQuery", alt:"jquery"},
   { icon: "./skill_icon/vuetify.svg", name: "Vuetify", alt:"vuetify"},
   { icon: "./skill_icon/antDesign.png", name: "Ant Design", alt:"antDesign"},
@@ -22,7 +23,7 @@ const skills = ref([
   { icon: "./skill_icon/mysql.png", name: "My SQL", alt:"mysql"},
   { icon: "./skill_icon/git.png", name: "Git", alt:"git"},
   { icon: "./skill_icon/github.png", name: "Git Hub", alt:"github"},
-  { icon: "./skill_icon/MSoffice.png", name: "MS Office", alt:"MSoffice"},
+  // { icon: "./skill_icon/MSoffice.png", name: "MS Office", alt:"MSoffice"},
   { icon: "./skill_icon/filmora.png", name: "Video Editing", alt:"filmora"},
   { icon: "./skill_icon/photoshop.png", name: "Adobe Photoshop", alt:"photoshop"},
   // Add other skills here...

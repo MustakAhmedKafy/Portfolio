@@ -13,9 +13,15 @@ const description = ref(
 
 const cards = [
   {
-    imageUrl: "img/munchkin.jpg",
-    title: "Essense",
-    url: "#",
+    imageUrl: "img/orbit.jpg",
+    title: "Exclusive E-commerse",
+    url: "https://frontend-kappa-lime.vercel.app/",
+    alt: "Exclusive e-commerse",
+  },
+  {
+    imageUrl: "img/essence.jpg",
+    title: "Essense E-commerse Homepage",
+    url: "https://mustakahmedkafy.github.io/Essence/",
     alt: "Essence e-commerse",
   },
   {
@@ -38,6 +44,12 @@ const cards = [
     alt: "Mechanic Mate",
   },
   {
+    imageUrl: "img/realestate.jpg",
+    title: "Real Estate Website",
+    url: "https://mustakahmedkafy.github.io/RealEstate/",
+    alt: "Real Estate Website",
+  },
+  {
     imageUrl: "img/grocery.jpg",
     title: "Alislah Grocery Shop",
     url: "https://grocery.yumaapp.uk/index.html",
@@ -49,12 +61,7 @@ const cards = [
     url: "https://carehome.yumaapp.uk/",
     alt: "Care Home Dashboard",
   },
-  {
-    imageUrl: "img/realestate.jpg",
-    title: "Real Estate Website",
-    url: "https://mustakahmedkafy.github.io/RealEstate/",
-    alt: "Real Estate Website",
-  },
+
   {
     imageUrl: "img/techforing.jpg",
     title: "Tech Foring",
@@ -68,18 +75,18 @@ const cards = [
     url: "https://healthcare.yumaapp.uk/",
     alt: "Healthcare website",
   },
+  {
+    imageUrl: "img/dashboard.png",
+    title: "Ant Vue Dashboard",
+    url: "https://ant-dashboard.mustakkafy.com/",
+    alt: "Ant Vue Dashboard",
+  },
 
   {
     imageUrl: "img/carpetshop.jpg",
     title: "Carpet Shop website",
     url: "https://carpetshop.yumaapp.uk/",
     alt: "Carpet Shop website",
-  },
-  {
-    imageUrl: "img/dashboard.png",
-    title: "Ant Vue Dashboard",
-    url: "https://ant-dashboard.mustakkafy.com/",
-    alt: "Ant Vue Dashboard",
   },
 
   {
@@ -136,7 +143,7 @@ onMounted(() => {
         >
           <a :href="card.url" class="url-box" target="_blank">
             <figure class="newsCard news-Slide-up">
-              <img :src="card.imageUrl" :alt="card.alt"/>
+              <img :src="card.imageUrl" :alt="card.alt" />
               <div class="newsCaption px-4">
                 <div
                   class="d-flex align-items-center justify-content-between cnt-title"
