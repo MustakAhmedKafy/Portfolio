@@ -27,20 +27,20 @@ const cards = [
   {
     imageUrl: "img/munchkin.jpg",
     title: "Munchkin Nursery School",
-    url: "https://mustakkafy.com/munchkin_school/",
+    url: "https://mustakahmedkafy.github.io/Munchkin_School/",
     alt: "Munchkin Nursery School",
   },
-  {
-    imageUrl: "img/epos_choice.jpg",
-    title: "EPOS Choice",
-    url: "https://mustakkafy.com/epos_choice/",
-    alt: "EPOS Choice",
-  },
+  // {
+  //   imageUrl: "img/epos_choice.jpg",
+  //   title: "EPOS Choice",
+  //   url: "https://mustakkafy.com/epos_choice/",
+  //   alt: "EPOS Choice",
+  // },
 
   {
     imageUrl: "img/mechanic.jpg",
     title: "Mechanic Mate",
-    url: "http://mechanic.mustakkafy.com/",
+    url: "https://mustakahmedkafy.github.io/MechanicMate/",
     alt: "Mechanic Mate",
   },
   {
@@ -49,12 +49,12 @@ const cards = [
     url: "https://mustakahmedkafy.github.io/RealEstate/",
     alt: "Real Estate Website",
   },
-  {
-    imageUrl: "img/grocery.jpg",
-    title: "Alislah Grocery Shop",
-    url: "https://grocery.yumaapp.uk/index.html",
-    alt: "Alislah Grocery Shop",
-  },
+  // {
+  //   imageUrl: "img/grocery.jpg",
+  //   title: "Alislah Grocery Shop",
+  //   url: "https://grocery.yumaapp.uk/index.html",
+  //   alt: "Alislah Grocery Shop",
+  // },
   {
     imageUrl: "img/carehome.jpg",
     title: "Care Home Dashboard",
@@ -65,7 +65,7 @@ const cards = [
   {
     imageUrl: "img/techforing.jpg",
     title: "Tech Foring",
-    url: "http://techforing.mustakkafy.com/",
+    url: "https://mustakahmedkafy.github.io/TechForing/",
     alt: "Tech Foring",
   },
 
@@ -75,12 +75,12 @@ const cards = [
     url: "https://healthcare.yumaapp.uk/",
     alt: "Healthcare website",
   },
-  {
-    imageUrl: "img/dashboard.png",
-    title: "Ant Vue Dashboard",
-    url: "https://ant-dashboard.mustakkafy.com/",
-    alt: "Ant Vue Dashboard",
-  },
+  // {
+  //   imageUrl: "img/dashboard.png",
+  //   title: "Ant Vue Dashboard",
+  //   url: "https://ant-dashboard.mustakkafy.com/",
+  //   alt: "Ant Vue Dashboard",
+  // },
 
   {
     imageUrl: "img/carpetshop.jpg",
