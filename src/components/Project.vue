@@ -15,7 +15,7 @@ const cards = [
   {
     imageUrl: "img/orbit.jpg",
     title: "Exclusive E-commerse",
-    url: "https://frontend-kappa-lime.vercel.app/",
+    url: "https://nuxt-ecommerce-coderorbit.vercel.app/",
     alt: "Exclusive e-commerse",
   },
   {
