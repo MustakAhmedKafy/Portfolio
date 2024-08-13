@@ -19,6 +19,19 @@ const cards = [
     alt: "Exclusive e-commerse",
   },
   {
+    imageUrl: "img/food.jpg",
+    title: "Food Ordering",
+    url: "https://rosespice.co.uk/",
+    alt: "Food Ordering",
+  },
+
+  {
+    imageUrl: "img/grocery.jpg",
+    title: "Alislah Grocery Shop",
+    url: "https://grocery.yumaapp.uk/",
+    alt: "Alislah Grocery Shop",
+  },
+  {
     imageUrl: "img/essence.jpg",
     title: "Essense E-commerse Homepage",
     url: "https://mustakahmedkafy.github.io/Essence/",
@@ -49,12 +62,7 @@ const cards = [
     url: "https://mustakahmedkafy.github.io/RealEstate/",
     alt: "Real Estate Website",
   },
-  // {
-  //   imageUrl: "img/grocery.jpg",
-  //   title: "Alislah Grocery Shop",
-  //   url: "https://grocery.yumaapp.uk/index.html",
-  //   alt: "Alislah Grocery Shop",
-  // },
+
   {
     imageUrl: "img/carehome.jpg",
     title: "Care Home Dashboard",
@@ -62,12 +70,12 @@ const cards = [
     alt: "Care Home Dashboard",
   },
 
-  {
-    imageUrl: "img/techforing.jpg",
-    title: "Tech Foring",
-    url: "https://mustakahmedkafy.github.io/TechForing/",
-    alt: "Tech Foring",
-  },
+  // {
+  //   imageUrl: "img/techforing.jpg",
+  //   title: "Tech Foring",
+  //   url: "https://mustakahmedkafy.github.io/TechForing/",
+  //   alt: "Tech Foring",
+  // },
 
   {
     imageUrl: "img/healthcare.jpg",
