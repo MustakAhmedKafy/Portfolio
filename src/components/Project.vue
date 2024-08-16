@@ -24,6 +24,12 @@ const cards = [
     url: "https://rosespice.co.uk/",
     alt: "Food Ordering",
   },
+  {
+    imageUrl: "img/teamOreo.jpg",
+    title: "Team Oreo",
+    url: "https://team-oreo.vercel.app/",
+    alt: "Team Oreo",
+  },
 
   {
     imageUrl: "img/grocery.jpg",
