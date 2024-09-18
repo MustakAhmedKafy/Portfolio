@@ -26,7 +26,7 @@
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/k-a-f-y/"
+          href="https://www.linkedin.com/in/mustakahmedkafy"
           target="_blank"
           class="icoLinkedin mt-2"
           title="Linkedin"

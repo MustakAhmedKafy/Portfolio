@@ -19,6 +19,18 @@ const cards = [
     alt: "Exclusive e-commerse",
   },
   {
+    imageUrl: "img/msa-school.jpg",
+    title: "MSA School",
+    url: "https://msa-school.vercel.app/",
+    alt: "MSA School",
+  },
+  {
+    imageUrl: "img/msa-dashboard.jpg",
+    title: "MSA Dashboard",
+    url: "https://msa-dashboard-ten.vercel.app/",
+    alt: "MSA Dashboard",
+  },
+  {
     imageUrl: "img/food.jpg",
     title: "Food Ordering",
     url: "https://rosespice.co.uk/",
