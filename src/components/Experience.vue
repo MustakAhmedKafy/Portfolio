@@ -86,7 +86,7 @@ const description = ref(
                     </div>
                     <div class="timeline-text">
                       <h3>Assistant Senior Officer</h3>
-                      <p>Wolton Digi-Tech Industries Limited</p>
+                      <p>Walton Digi-Tech Industries Limited</p>
                     </div>
                   </div>
                 </div>
