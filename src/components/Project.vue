@@ -4,6 +4,7 @@ import Button from "./Button.vue";
 
 const button2 = {
   text: "Preview",
+  url: "#", // Replace with a default URL or remove if not needed
 };
 
 const title = ref("Creative Showcase");
@@ -130,11 +131,16 @@ const cards = [
   },
 ];
 
-const shortedCard = ref([]);
+
 
 const perPage = 6;
 
 const currentPage = ref(1);
+const shortedCard = computed(() => {
+  const start = (currentPage.value - 1) * perPage;
+  return cards.slice(start, start + perPage);
+});
+
 const onClickHandler = (page) => {
   currentPage.value = page;
   shortedCard.value = cards.slice(
@@ -162,18 +168,12 @@ onMounted(() => {
 
       <div class="row">
         <!-- CARD 1-->
-        <div
-          v-for="(card, index) in shortedCard"
-          :key="index"
-          class="col-lg-4 col-md-6 col-sm-12 mt-3"
-        >
+        <div v-for="(card, index) in shortedCard" :key="index" class="col-lg-4 col-md-6 col-sm-12 mt-3">
           <a :href="card.url" class="url-box" target="_blank">
             <figure class="newsCard news-Slide-up">
               <img :src="card.imageUrl" :alt="card.alt" />
               <div class="newsCaption px-4">
-                <div
-                  class="d-flex align-items-center justify-content-between cnt-title"
-                >
+                <div class="d-flex align-items-center justify-content-between cnt-title">
                   <h5 class="newsCaption-title text-white m-0">
                     {{ card.title }}
                   </h5>
@@ -193,13 +193,8 @@ onMounted(() => {
       </div>
       <!-- Pagination -->
       <div class="mt-3 text-end">
-        <vue-awesome-paginate
-          :total-items="12"
-          :items-per-page="6"
-          :max-pages-shown="5"
-          v-model="currentPage"
-          :on-click="onClickHandler"
-        >
+        <vue-awesome-paginate :total-items="cards.length" :items-per-page="perPage" :max-pages-shown="5"
+          v-model="currentPage" :on-click="onClickHandler">
           <template #prev-button>
             <span>
               <i class="fa-solid fa-angle-left"></i>
@@ -232,10 +227,12 @@ onMounted(() => {
   justify-content: center;
   border-radius: 50%;
 }
+
 .link-icon .fa-link:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
 .newsCard {
   position: relative;
   width: 100%;
@@ -255,21 +252,15 @@ figure img {
 
 .overlay {
   background: rgb(113, 79, 161);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(40, 26, 54, 1) 0%,
-    rgba(89, 59, 116, 0) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(40, 26, 54, 1) 0%,
-    rgba(89, 59, 116, 0) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(113, 79, 161, 1) 0%,
-    rgba(12, 99, 107, 0) 100%
-  );
+  background: -moz-linear-gradient(0deg,
+      rgba(40, 26, 54, 1) 0%,
+      rgba(89, 59, 116, 0) 100%);
+  background: -webkit-linear-gradient(0deg,
+      rgba(40, 26, 54, 1) 0%,
+      rgba(89, 59, 116, 0) 100%);
+  background: linear-gradient(0deg,
+      rgba(113, 79, 161, 1) 0%,
+      rgba(12, 99, 107, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#281a36", endColorstr="#593b74", GradientType=1);
   display: block;
   position: absolute;
@@ -313,11 +304,9 @@ figure img {
   background: rgb(113, 79, 161);
   /* background: -moz-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%);
   background: -webkit-linear-gradient(0deg, rgba(64, 10, 111, 1) 0%, rgba(89, 59, 116, 0) 100%); */
-  background: linear-gradient(
-    0deg,
-    rgba(147, 118, 188, 1) 0%,
-    rgba(12, 99, 107, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(147, 118, 188, 1) 0%,
+      rgba(12, 99, 107, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
 }
 
@@ -328,11 +317,9 @@ figure img {
 @media (max-width: 991px) {
   .news-Slide-up:hover .overlay {
     background: rgb(113, 79, 161);
-    background: linear-gradient(
-      0deg,
-      rgba(147, 118, 188, 1) 0%,
-      rgba(12, 99, 107, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(147, 118, 188, 1) 0%,
+        rgba(12, 99, 107, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#400a6f", endColorstr="#593b74", GradientType=1);
   }
 
@@ -340,6 +327,7 @@ figure img {
     transform: translateY(0);
   }
 }
+
 /* desktop media */
 @media (min-width: 992px) {
   .row {
