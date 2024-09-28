@@ -81,7 +81,7 @@ function eraseText() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4">
     <div class="container d-flex align-items-center">
       <a class="navbar-brand" href="#"
         ><img :src="myLogo.src" :alt="myLogo.alt"
