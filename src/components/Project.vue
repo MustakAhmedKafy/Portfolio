@@ -185,7 +185,8 @@ onMounted(() => {
                 <!-- <div class="newsCaption-content d-flex">
                   <span class="col-10 py-2 px-0">{{ card.description }}</span>
                 </div> -->
-                <Button :link="button2.url" :buttonText="button2.text"></Button>
+             
+                <Button :link="card.url" :buttonText="button2.text" />
               </div>
               <span class="overlay"></span>
             </figure>
