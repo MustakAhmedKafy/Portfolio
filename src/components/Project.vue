@@ -105,7 +105,7 @@ const cards = [
   {
     imageUrl: "img/dashboard.png",
     title: "Ant Vue Dashboard",
-    url: "https://ant-dashboard.mustakkafy.com/",
+    url: "https://vue-ant-dashboard.vercel.app/",
     alt: "Ant Vue Dashboard",
   },
   
