@@ -44,8 +44,8 @@
                 'text-4xl md:text-5xl lg:text-7xl font-bold leading-tight transition-colors duration-300',
                 isDark ? 'text-white' : 'text-slate-900'
               ]">
-                <span class="block">John</span>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Smith</span>
+                <span class="block">Mustak</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Ahmed kafy</span>
               </h1>
 
               <h2 :class="[
@@ -66,11 +66,14 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-4">
-              <button
+              <a
+                href="https://raw.githubusercontent.com/MustakAhmedKafy/cv/master/Mustak_Ahmed.pdf"
+                download
+                target="_blank"
                 class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2">
                 <span>Download CV</span>
-                <Icon icon="mdi:arrow-right" class="w-5 h-5" />
-              </button>
+                <Icon icon="mdi:download" class="w-5 h-5" />
+              </a>
             </div>
 
             <!-- Social Links -->
