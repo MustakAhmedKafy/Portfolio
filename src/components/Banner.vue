@@ -10,6 +10,7 @@ const button1 = {
 //   link: "#button2link",
 //   text: "Button 2",
 // };
+// };
 
 const title = "I am Mustak Ahmed Kafy";
 // text type
