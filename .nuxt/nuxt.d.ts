@@ -7,7 +7,7 @@
 /// <reference path="types/build.d.ts" />
 /// <reference path="types/schema.d.ts" />
 /// <reference path="types/app.config.d.ts" />
-/// <reference types="/Volumes/InnovationStation/Creative Studio/Ongoing project/Portfolio/node_modules/@nuxt/nitro-server/dist/index.mjs" />
+/// <reference types="D:/Portfolio/node_modules/@nuxt/nitro-server/dist/index.mjs" />
 /// <reference types="vue-router" />
 /// <reference path="types/middleware.d.ts" />
 /// <reference path="types/nitro-middleware.d.ts" />

@@ -103,13 +103,11 @@
 
               <!-- Profile Image Container -->
               <div class="absolute inset-8 rounded-full overflow-hidden shadow-2xl">
-                <div
-                  class="w-full h-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center">
-                  <div
-                    class="w-full h-full bg-gradient-to-br from-indigo-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                    JS
-                  </div>
-                </div>
+                <img
+                  src="/Mutsak.png"
+                  alt="Mustak Ahmed Kafy"
+                  class="w-full h-full object-cover"
+                />
               </div>
 
               <!-- Enhanced floating stats with perfect glass effect -->
@@ -162,21 +160,21 @@ const socialLinks = [
 // Stats data
 const stats = [
   {
-    value: '5+',
+    value: '3+',
     label: 'Years Experience',
     icon: 'mdi:calendar-check',
     position: 'top-0 right-0',
     delay: 0.5
   },
   {
-    value: '100+',
+    value: '50+',
     label: 'Projects Done',
     icon: 'mdi:briefcase-check',
     position: 'bottom-0 left-0',
     delay: 1
   },
   {
-    value: '50+',
+    value: '10+',
     label: 'Happy Clients',
     icon: 'mdi:account-heart',
     position: 'top-1/2 -left-4',
