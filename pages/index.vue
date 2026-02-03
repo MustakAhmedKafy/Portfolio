@@ -83,7 +83,7 @@
                 Follow me
               </span>
               <div class="flex space-x-4">
-                <a v-for="social in socialLinks" :key="social.name" :href="social.href" :class="[
+                <a v-for="social in socialLinks" :key="social.name" :href="social.href" target="_blank" rel="noopener noreferrer" :class="[
                   'w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110',
                   social.class,
                   isDark ? 'hover:bg-slate-800' : 'hover:bg-gray-100'
@@ -151,10 +151,10 @@ const isDark = ref(false)
 
 // Social links
 const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: 'mdi:linkedin', class: 'text-blue-600' },
-  { name: 'GitHub', href: '#', icon: 'mdi:github', class: 'text-gray-800' },
-  { name: 'Twitter', href: '#', icon: 'mdi:twitter', class: 'text-blue-400' },
-  { name: 'Dribbble', href: '#', icon: 'mdi:dribbble', class: 'text-pink-500' }
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mustakahmedkafy', icon: 'mdi:linkedin', class: 'text-blue-600' },
+  { name: 'GitHub', href: 'https://github.com/MustakAhmedKafy', icon: 'mdi:github', class: 'text-slate-700 dark:text-slate-300' },
+  { name: 'Twitter', href: 'https://twitter.com/Mustak_Kafy', icon: 'mdi:twitter', class: 'text-blue-400' },
+  { name: 'Facebook', href: 'https://www.facebook.com/MustakAhmedKafy', icon: 'mdi:facebook', class: 'text-blue-500' }
 ]
 
 // Stats data

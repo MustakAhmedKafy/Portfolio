@@ -36,31 +36,36 @@
             <div class="marquee-content">
               <div v-for="skill in row1Skills" :key="'r1-' + skill.id" class="skill-card-wrapper">
                 <div
-                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 hover:border-purple-400 dark:hover:border-purple-500/50 hover:-translate-y-2 cursor-pointer card-width">
-                  <!-- Background gradient on hover -->
+                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-900/90 border-2 border-gray-200/50 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/20 hover:border-purple-400/70 dark:hover:border-purple-500/70 hover:-translate-y-1 cursor-pointer card-width backdrop-blur-sm">
+                  <!-- Animated gradient background on hover -->
                   <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-50 dark:from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    class="absolute inset-0 bg-gradient-to-br from-purple-100/80 via-indigo-50/50 to-pink-50/30 dark:from-purple-500/20 dark:via-indigo-500/10 dark:to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   </div>
 
-                  <!-- Shine effect on hover -->
+                  <!-- Enhanced shine effect -->
                   <div
-                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent">
+                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent">
+                  </div>
+
+                  <!-- Glow effect -->
+                  <div
+                    class="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500">
                   </div>
 
                   <!-- Content -->
-                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-3">
                     <div
-                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] flex items-center justify-center rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-slate-700/50 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
+                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700/60 dark:to-slate-800/60 group-hover:from-purple-100 group-hover:to-indigo-100 dark:group-hover:from-purple-500/30 dark:group-hover:to-indigo-500/30 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6 shadow-lg group-hover:shadow-xl">
                       <img :src="skill.image" :alt="skill.name"
-                        class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
                     </div>
                     <h3
-                      class="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 dark:text-gray-200 text-center group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 whitespace-nowrap">
+                      class="text-xs sm:text-sm md:text-base font-bold text-gray-800 dark:text-gray-100 text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:via-pink-500 group-hover:to-indigo-600 dark:group-hover:from-purple-400 dark:group-hover:via-pink-400 dark:group-hover:to-indigo-400 transition-all duration-500 whitespace-nowrap">
                       {{ skill.name }}
                     </h3>
-                    <!-- Hover indicator line -->
+                    <!-- Enhanced hover indicator line -->
                     <div
-                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full group-hover:w-8 md:group-hover:w-12 transition-all duration-500">
+                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full group-hover:w-10 md:group-hover:w-12 transition-all duration-500 shadow-lg shadow-purple-500/50">
                     </div>
                   </div>
                 </div>
@@ -70,25 +75,28 @@
             <div class="marquee-content" aria-hidden="true">
               <div v-for="skill in row1Skills" :key="'r1-dup-' + skill.id" class="skill-card-wrapper">
                 <div
-                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 hover:border-purple-400 dark:hover:border-purple-500/50 hover:-translate-y-2 cursor-pointer card-width">
+                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-900/90 border-2 border-gray-200/50 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/20 hover:border-purple-400/70 dark:hover:border-purple-500/70 hover:-translate-y-1 cursor-pointer card-width backdrop-blur-sm">
                   <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-50 dark:from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    class="absolute inset-0 bg-gradient-to-br from-purple-100/80 via-indigo-50/50 to-pink-50/30 dark:from-purple-500/20 dark:via-indigo-500/10 dark:to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   </div>
                   <div
-                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent">
+                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent">
                   </div>
-                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+                  <div
+                    class="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500">
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-3">
                     <div
-                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] flex items-center justify-center rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-slate-700/50 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
+                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700/60 dark:to-slate-800/60 group-hover:from-purple-100 group-hover:to-indigo-100 dark:group-hover:from-purple-500/30 dark:group-hover:to-indigo-500/30 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6 shadow-lg group-hover:shadow-xl">
                       <img :src="skill.image" :alt="skill.name"
-                        class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
                     </div>
                     <h3
-                      class="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 dark:text-gray-200 text-center group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 whitespace-nowrap">
+                      class="text-xs sm:text-sm md:text-base font-bold text-gray-800 dark:text-gray-100 text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:via-pink-500 group-hover:to-indigo-600 dark:group-hover:from-purple-400 dark:group-hover:via-pink-400 dark:group-hover:to-indigo-400 transition-all duration-500 whitespace-nowrap">
                       {{ skill.name }}
                     </h3>
                     <div
-                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full group-hover:w-8 md:group-hover:w-12 transition-all duration-500">
+                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full group-hover:w-10 md:group-hover:w-12 transition-all duration-500 shadow-lg shadow-purple-500/50">
                     </div>
                   </div>
                 </div>
@@ -103,25 +111,28 @@
             <div class="marquee-content">
               <div v-for="skill in row2Skills" :key="'r2-' + skill.id" class="skill-card-wrapper">
                 <div
-                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 hover:border-purple-400 dark:hover:border-purple-500/50 hover:-translate-y-2 cursor-pointer card-width">
+                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-900/90 border-2 border-gray-200/50 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/20 hover:border-purple-400/70 dark:hover:border-purple-500/70 hover:-translate-y-1 cursor-pointer card-width backdrop-blur-sm">
                   <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-50 dark:from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    class="absolute inset-0 bg-gradient-to-br from-purple-100/80 via-indigo-50/50 to-pink-50/30 dark:from-purple-500/20 dark:via-indigo-500/10 dark:to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   </div>
                   <div
-                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent">
+                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent">
                   </div>
-                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+                  <div
+                    class="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500">
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-3">
                     <div
-                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] flex items-center justify-center rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-slate-700/50 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
+                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700/60 dark:to-slate-800/60 group-hover:from-purple-100 group-hover:to-indigo-100 dark:group-hover:from-purple-500/30 dark:group-hover:to-indigo-500/30 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6 shadow-lg group-hover:shadow-xl">
                       <img :src="skill.image" :alt="skill.name"
-                        class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
                     </div>
                     <h3
-                      class="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 dark:text-gray-200 text-center group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 whitespace-nowrap">
+                      class="text-xs sm:text-sm md:text-base font-bold text-gray-800 dark:text-gray-100 text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:via-pink-500 group-hover:to-indigo-600 dark:group-hover:from-purple-400 dark:group-hover:via-pink-400 dark:group-hover:to-indigo-400 transition-all duration-500 whitespace-nowrap">
                       {{ skill.name }}
                     </h3>
                     <div
-                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full group-hover:w-8 md:group-hover:w-12 transition-all duration-500">
+                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full group-hover:w-10 md:group-hover:w-12 transition-all duration-500 shadow-lg shadow-purple-500/50">
                     </div>
                   </div>
                 </div>
@@ -131,25 +142,28 @@
             <div class="marquee-content" aria-hidden="true">
               <div v-for="skill in row2Skills" :key="'r2-dup-' + skill.id" class="skill-card-wrapper">
                 <div
-                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800/80 border border-gray-200/80 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 hover:border-purple-400 dark:hover:border-purple-500/50 hover:-translate-y-2 cursor-pointer card-width">
+                  class="skill-card group relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-white via-white to-gray-50 dark:from-slate-800/90 dark:via-slate-800/80 dark:to-slate-900/90 border-2 border-gray-200/50 dark:border-slate-700/50 p-4 sm:p-5 md:p-6 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/20 hover:border-purple-400/70 dark:hover:border-purple-500/70 hover:-translate-y-1 cursor-pointer card-width backdrop-blur-sm">
                   <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-50 dark:from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    class="absolute inset-0 bg-gradient-to-br from-purple-100/80 via-indigo-50/50 to-pink-50/30 dark:from-purple-500/20 dark:via-indigo-500/10 dark:to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   </div>
                   <div
-                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent">
+                    class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent">
                   </div>
-                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+                  <div
+                    class="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500">
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-3">
                     <div
-                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] flex items-center justify-center rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-slate-700/50 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
+                      class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700/60 dark:to-slate-800/60 group-hover:from-purple-100 group-hover:to-indigo-100 dark:group-hover:from-purple-500/30 dark:group-hover:to-indigo-500/30 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6 shadow-lg group-hover:shadow-xl">
                       <img :src="skill.image" :alt="skill.name"
-                        class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+                        class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
                     </div>
                     <h3
-                      class="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-700 dark:text-gray-200 text-center group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 whitespace-nowrap">
+                      class="text-xs sm:text-sm md:text-base font-bold text-gray-800 dark:text-gray-100 text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:via-pink-500 group-hover:to-indigo-600 dark:group-hover:from-purple-400 dark:group-hover:via-pink-400 dark:group-hover:to-indigo-400 transition-all duration-500 whitespace-nowrap">
                       {{ skill.name }}
                     </h3>
                     <div
-                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full group-hover:w-8 md:group-hover:w-12 transition-all duration-500">
+                      class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 md:h-1 w-0 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full group-hover:w-10 md:group-hover:w-12 transition-all duration-500 shadow-lg shadow-purple-500/50">
                     </div>
                   </div>
                 </div>
@@ -179,12 +193,12 @@ import { Icon } from '@iconify/vue'
 const skills = [
   {
     id: 1,
-    name: 'HTML',
+    name: 'HTML5',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
   },
   {
     id: 2,
-    name: 'CSS',
+    name: 'CSS3',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
   },
   {
@@ -209,43 +223,43 @@ const skills = [
   },
   {
     id: 7,
-    name: 'Vue JS',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+    name: 'React.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     id: 8,
-    name: 'Nuxt JS',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg',
+    name: 'Next.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
   },
   {
     id: 9,
+    name: 'Redux',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  },
+  {
+    id: 10,
+    name: 'Vue.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
+  },
+  {
+    id: 11,
+    name: 'Nuxt.js',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg',
+  },
+  {
+    id: 12,
     name: 'jQuery',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg',
   },
   {
-    id: 10,
-    name: 'Vuetify',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg',
-  },
-  {
-    id: 11,
-    name: 'Ant Design',
-    image: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  },
-  {
-    id: 12,
-    name: 'WordPress',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg',
-  },
-  {
     id: 13,
-    name: 'PHP',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+    name: 'Axios',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg',
   },
   {
     id: 14,
-    name: 'MySQL',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    name: 'Figma',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
   },
   {
     id: 15,
@@ -259,11 +273,6 @@ const skills = [
   },
   {
     id: 17,
-    name: 'Video Editing',
-    image: 'https://cdn-icons-png.flaticon.com/512/5977/5977590.png',
-  },
-  {
-    id: 18,
     name: 'Photoshop',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg',
   },

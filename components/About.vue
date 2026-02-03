@@ -29,29 +29,33 @@
 
           <!-- CTA Buttons -->
           <div ref="buttons" class="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
-              class="cta-primary group relative overflow-hidden bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <a
+              href="#contact"
+              class="cta-primary group relative overflow-hidden bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1">
               <span class="relative z-10 flex items-center justify-center gap-2">
                 <Icon icon="mdi:rocket-launch" class="w-5 h-5" />
                 Let's Work Together
               </span>
               <div
-                class="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
               </div>
-            </button>
+            </a>
 
-            <button
-              class="cta-secondary group border-2 border-purple-600 text-purple-600 dark:text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+            <a
+              href="https://raw.githubusercontent.com/MustakAhmedKafy/cv/master/Mustak_Ahmed.pdf"
+              download
+              target="_blank"
+              class="cta-secondary group border-2 border-purple-600 text-purple-600 dark:text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white transition-all duration-300 ease-in-out hover:-translate-y-1">
               <span class="flex items-center justify-center gap-2">
                 <Icon icon="mdi:download" class="w-5 h-5" />
                 Download CV
               </span>
-            </button>
+            </a>
           </div>
 
           <!-- Social Links -->
           <div ref="social" class="flex gap-4 pt-4">
-            <a v-for="social in socialLinks" :key="social.name" :href="social.url"
+            <a v-for="social in socialLinks" :key="social.name" :href="social.url" target="_blank" rel="noopener noreferrer"
               class="social-link w-12 h-12 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-xl border border-purple-200 dark:border-purple-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
               <Icon :icon="social.icon" class="w-6 h-6" />
             </a>
@@ -180,10 +184,10 @@ const codeLine7 = ref(null)
 const codeLine8 = ref(null)
 
 const socialLinks = [
-  { name: 'GitHub', icon: 'mdi:github', url: '#' },
-  { name: 'LinkedIn', icon: 'mdi:linkedin', url: '#' },
-  { name: 'Twitter', icon: 'mdi:twitter', url: '#' },
-  { name: 'Dribbble', icon: 'mdi:dribbble', url: '#' }
+  { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/mustakahmedkafy' },
+  { name: 'GitHub', icon: 'mdi:github', url: 'https://github.com/MustakAhmedKafy' },
+  { name: 'Twitter', icon: 'mdi:twitter', url: 'https://twitter.com/Mustak_Kafy' },
+  { name: 'Facebook', icon: 'mdi:facebook', url: 'https://www.facebook.com/MustakAhmedKafy' }
 ]
 
 onMounted(() => {
