@@ -1,7 +1,7 @@
 
 /// <reference path="app.config.d.ts" />
 /// <reference path="runtime-config.d.ts" />
-/// <reference types="D:/Portfolio/node_modules/@nuxt/nitro-server/dist/index.mjs" />
+/// <reference types="/Volumes/InnovationStation/Creative Studio/Ongoing project/Portfolio/node_modules/@nuxt/nitro-server/dist/index.mjs" />
 /// <reference path="nitro-middleware.d.ts" />
 /// <reference path="./schema.d.ts" />
 
