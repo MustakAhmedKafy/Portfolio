@@ -21,11 +21,11 @@
                 <Icon icon="ph:code-bold" class="w-6 h-6 text-white" />
               </div>
               <span class="text-2xl font-bold transition-colors"
-                :class="isDark ? 'text-white' : 'text-slate-900'">Portfolio</span>
+                :class="isDark ? 'text-white' : 'text-slate-900'">Mustak Ahmed</span>
             </a>
             <p class="text-sm leading-relaxed mb-6 transition-colors"
               :class="isDark ? 'text-slate-400' : 'text-slate-600'">
-              Crafting exceptional digital experiences with modern technologies. Let's build something amazing together.
+              Frontend Developer crafting pixel-perfect, responsive web experiences with React, Vue, and modern technologies.
             </p>
             <!-- Social Links -->
             <div class="flex space-x-3">
@@ -109,14 +109,12 @@
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p class="text-sm transition-colors"
             :class="isDark ? 'text-slate-400' : 'text-slate-600'">
-            &copy; {{ currentYear }} <span class="text-purple-500 font-medium">Portfolio</span>. All rights reserved.
+            &copy; {{ currentYear }} <span class="text-purple-500 font-medium">Mustak Ahmed Kafy</span>. All rights reserved.
           </p>
-          <div class="flex items-center space-x-6">
-            <a href="#" class="text-sm hover:text-purple-500 transition-colors"
-              :class="isDark ? 'text-slate-400' : 'text-slate-600'">Privacy Policy</a>
-            <a href="#" class="text-sm hover:text-purple-500 transition-colors"
-              :class="isDark ? 'text-slate-400' : 'text-slate-600'">Terms of Service</a>
-          </div>
+          <p class="text-sm transition-colors flex items-center gap-1"
+            :class="isDark ? 'text-slate-400' : 'text-slate-600'">
+            Made with <Icon icon="ph:heart-fill" class="w-4 h-4 text-red-500" /> in Bangladesh
+          </p>
         </div>
       </div>
     </div>
@@ -138,30 +136,33 @@ defineProps({
 const currentYear = computed(() => new Date().getFullYear())
 
 const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: 'mdi:linkedin' },
-  { name: 'GitHub', href: '#', icon: 'mdi:github' },
-  { name: 'Twitter', href: '#', icon: 'mdi:twitter' },
-  { name: 'Dribbble', href: '#', icon: 'mdi:dribbble' }
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mustakahmedkafy', icon: 'mdi:linkedin' },
+  { name: 'GitHub', href: 'https://github.com/MustakAhmedKafy', icon: 'mdi:github' },
+  { name: 'Twitter', href: 'https://twitter.com/Mustak_Kafy', icon: 'mdi:twitter' },
+  { name: 'Facebook', href: 'https://www.facebook.com/MustakAhmedKafy', icon: 'mdi:facebook' }
 ]
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#work' },
+  { name: 'Services', href: '#services' },
+  { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' }
 ]
 
 const services = [
-  'Web Development',
+  'Web Design',
+  'Frontend Development',
   'UI/UX Design',
-  'Mobile Apps',
-  'Consulting'
+  'Responsive Design',
+  'SEO Optimization',
+  'Performance Optimization'
 ]
 
 const contactInfo = [
-  { label: 'Email', value: 'hello@portfolio.com', icon: 'ph:envelope-duotone', href: 'mailto:hello@portfolio.com' },
-  { label: 'Phone', value: '+1 234 567 890', icon: 'ph:phone-duotone', href: 'tel:+1234567890' },
-  { label: 'Location', value: 'New York, USA', icon: 'ph:map-pin-duotone', href: '#' }
+  { label: 'Email', value: 'ahmedmustak99@gmail.com', icon: 'ph:envelope-duotone', href: 'mailto:ahmedmustak99@gmail.com' },
+  { label: 'Phone', value: '+880 1712 604506', icon: 'ph:phone-duotone', href: 'tel:+8801712604506' },
+  { label: 'Location', value: 'Dhaka, Bangladesh', icon: 'ph:map-pin-duotone', href: 'https://maps.google.com/?q=Dhaka,Bangladesh' }
 ]
 </script>

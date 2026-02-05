@@ -44,29 +44,29 @@ const clearForm = () => {
 const contactInfo = [
   {
     icon: 'ph:phone-call-duotone',
-    label: 'Call Us',
-    value: '+49 (0) 9132 84-0478',
-    href: 'tel:+4909132840478'
+    label: 'Call Me',
+    value: '+880 1712 604506',
+    href: 'tel:+8801712604506'
   },
   {
     icon: 'ph:envelope-duotone',
-    label: 'Email Us',
-    value: 'hi@johndesign.com',
-    href: 'mailto:hi@johndesign.com'
+    label: 'Email Me',
+    value: 'ahmedmustak99@gmail.com',
+    href: 'mailto:ahmedmustak99@gmail.com'
   },
   {
     icon: 'ph:map-pin-duotone',
-    label: 'Visit Us',
-    value: '1802 Black Trail Suite 636',
-    href: '#'
+    label: 'Location',
+    value: 'Dhaka, Bangladesh',
+    href: 'https://maps.google.com/?q=Dhaka,Bangladesh'
   }
 ]
 
 const socialLinks = [
-  { icon: 'ph:dribbble-logo-fill', href: '#', label: 'Dribbble' },
-  { icon: 'ph:behance-logo-fill', href: '#', label: 'Behance' },
-  { icon: 'ph:linkedin-logo-fill', href: '#', label: 'LinkedIn' },
-  { icon: 'ph:instagram-logo-fill', href: '#', label: 'Instagram' }
+  { icon: 'mdi:linkedin', href: 'https://www.linkedin.com/in/mustakahmedkafy', label: 'LinkedIn' },
+  { icon: 'mdi:github', href: 'https://github.com/MustakAhmedKafy', label: 'GitHub' },
+  { icon: 'mdi:twitter', href: 'https://twitter.com/Mustak_Kafy', label: 'Twitter' },
+  { icon: 'mdi:facebook', href: 'https://www.facebook.com/MustakAhmedKafy', label: 'Facebook' }
 ]
 </script>
 
@@ -129,7 +129,7 @@ const socialLinks = [
       </div>
 
       <!-- Main Content Grid -->
-      <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
+      <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
 
         <!-- Left Side - Contact Info -->
         <div class="lg:col-span-2 flex flex-col space-y-6" data-aos="fade-right" data-aos-delay="100">
@@ -156,27 +156,17 @@ const socialLinks = [
           <div class="pt-6 border-t border-slate-200 dark:border-white/[0.05]">
             <p class="text-slate-500 dark:text-slate-500 text-sm mb-4">Follow Us</p>
             <div class="flex gap-3">
-              <a v-for="social in socialLinks" :key="social.label" :href="social.href" :aria-label="social.label"
+              <a v-for="social in socialLinks" :key="social.label" :href="social.href" :aria-label="social.label" target="_blank" rel="noopener noreferrer"
                 class="w-11 h-11 rounded-xl bg-white/80 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.05] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/10 hover:border-indigo-300 dark:hover:border-indigo-500/30 transition-all duration-300">
                 <Icon :icon="social.icon" class="w-5 h-5" />
               </a>
             </div>
           </div>
-
-          <!-- Decorative Quote -->
-          <div
-            class="hidden lg:flex flex-col justify-center flex-grow p-6 rounded-2xl bg-gradient-to-br from-indigo-100/80 to-purple-100/50 dark:from-indigo-500/10 dark:to-purple-500/5 border border-indigo-200/50 dark:border-indigo-500/10">
-            <Icon icon="ph:quotes-fill" class="w-8 h-8 text-indigo-400/60 dark:text-indigo-500/50 mb-3" />
-            <p class="text-slate-700 dark:text-slate-300 italic leading-relaxed">
-              "Great design is not just what it looks like, but how it works and feels."
-            </p>
-            <p class="text-indigo-600 dark:text-indigo-400 text-sm mt-3 font-medium">— Our Philosophy</p>
-          </div>
         </div>
 
         <!-- Right Side - Contact Form -->
-        <div class="lg:col-span-3 flex flex-col" data-aos="fade-left" data-aos-delay="200">
-          <div class="relative flex-grow flex flex-col">
+        <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="200">
+          <div class="relative">
             <!-- Glow Effect Behind Card -->
             <div
               class="absolute -inset-1 bg-gradient-to-r from-indigo-400/30 via-purple-400/30 to-purple-500/30 dark:from-indigo-600/20 dark:via-purple-600/20 dark:to-purple-700/20 rounded-3xl blur-xl opacity-60 dark:opacity-50">
@@ -184,7 +174,7 @@ const socialLinks = [
 
             <!-- Form Card -->
             <div
-              class="relative flex-grow bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-200 dark:border-white/[0.08] p-6 sm:p-8 lg:p-10 shadow-xl shadow-indigo-500/5 dark:shadow-none">
+              class="relative bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-slate-200 dark:border-white/[0.08] p-6 sm:p-8 lg:p-10 shadow-xl shadow-indigo-500/5 dark:shadow-none">
               <form ref="formRef" @submit.prevent="sendEmail" class="space-y-6">
                 <!-- Name & Email Row -->
                 <div class="grid sm:grid-cols-2 gap-6">
@@ -194,11 +184,11 @@ const socialLinks = [
                       class="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 group-focus-within:text-indigo-600 dark:group-focus-within:text-indigo-400 transition-colors">
                       Full Name
                     </label>
-                    <div class="relative">
+                    <div class="input-glow-wrapper relative">
                       <Icon icon="ph:user-duotone"
-                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500 group-focus-within:text-indigo-500 dark:group-focus-within:text-indigo-400 transition-colors" />
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500 z-10 transition-colors pointer-events-none" />
                       <input type="text" id="fullName" name="user_name" placeholder="John Doe"
-                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.08] rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500/50 focus:bg-white dark:focus:bg-indigo-500/5 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300"
+                        class="input-glow w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all duration-300"
                         required />
                     </div>
                   </div>
@@ -209,11 +199,11 @@ const socialLinks = [
                       class="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 group-focus-within:text-indigo-600 dark:group-focus-within:text-indigo-400 transition-colors">
                       Email Address
                     </label>
-                    <div class="relative">
+                    <div class="input-glow-wrapper relative">
                       <Icon icon="ph:envelope-duotone"
-                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500 group-focus-within:text-indigo-500 dark:group-focus-within:text-indigo-400 transition-colors" />
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500 z-10 transition-colors pointer-events-none" />
                       <input type="email" id="email" name="user_email" placeholder="john@example.com"
-                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.08] rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500/50 focus:bg-white dark:focus:bg-indigo-500/5 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300"
+                        class="input-glow w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all duration-300"
                         required />
                     </div>
                   </div>
@@ -226,12 +216,12 @@ const socialLinks = [
                     class="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2 group-focus-within:text-indigo-600 dark:group-focus-within:text-indigo-400 transition-colors">
                     Your Message
                   </label>
-                  <div class="relative">
+                  <div class="input-glow-wrapper relative">
                     <Icon icon="ph:chat-text-duotone"
-                      class="absolute left-4 top-4 w-5 h-5 text-slate-400 dark:text-slate-500 group-focus-within:text-indigo-500 dark:group-focus-within:text-indigo-400 transition-colors" />
+                      class="absolute left-4 top-4 w-5 h-5 text-slate-400 dark:text-slate-500 z-10 transition-colors pointer-events-none" />
                     <textarea id="message" name="message" rows="5"
                       placeholder="Tell us about your project, goals, and timeline..."
-                      class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.08] rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500/50 focus:bg-white dark:focus:bg-indigo-500/5 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300 resize-none"
+                      class="input-glow w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all duration-300 resize-none"
                       required></textarea>
                   </div>
                 </div>
@@ -393,10 +383,89 @@ textarea::-webkit-scrollbar-thumb:hover {
   background: rgba(99, 102, 241, 0.5);
 }
 
+/* Animated Glow Input Effect */
+.input-glow-wrapper {
+  position: relative;
+  border-radius: 0.75rem;
+}
+
+.input-glow-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 0.85rem;
+  background: conic-gradient(
+    from var(--glow-angle, 0deg),
+    #6366f1,
+    #8b5cf6,
+    #a855f7,
+    #6366f1
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  animation: glowRotate 3s linear infinite;
+}
+
+.input-glow-wrapper:focus-within::before {
+  opacity: 1;
+}
+
+.input-glow-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 0.85rem;
+  background: conic-gradient(
+    from var(--glow-angle, 0deg),
+    #6366f1,
+    #8b5cf6,
+    #a855f7,
+    #6366f1
+  );
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  animation: glowRotate 3s linear infinite;
+}
+
+.input-glow-wrapper:focus-within::after {
+  opacity: 0.5;
+}
+
+.input-glow {
+  position: relative;
+  z-index: 1;
+  outline: none !important;
+}
+
+.input-glow:focus {
+  border-color: transparent;
+  background: white;
+}
+
+:root.dark .input-glow:focus,
+.dark .input-glow:focus {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+@property --glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glowRotate {
+  0% {
+    --glow-angle: 0deg;
+  }
+  100% {
+    --glow-angle: 360deg;
+  }
+}
+
 /* Focus visible for accessibility */
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid rgba(99, 102, 241, 0.5);
