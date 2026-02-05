@@ -40,7 +40,7 @@
       </div>
 
       <!-- Timeline -->
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-3xl mx-auto">
         <div class="relative">
           <!-- Timeline Line -->
           <div
@@ -69,34 +69,40 @@
 
               <!-- Content Card -->
               <div class="md:w-1/2 ml-20 sm:ml-24 md:ml-0"
-                :class="index % 2 === 0 ? 'md:pr-10 lg:pr-12 md:text-right' : 'md:pl-10 lg:pl-12 md:text-left'">
+                :class="index % 2 === 0 ? 'md:pr-8 lg:pr-10 md:text-right' : 'md:pl-8 lg:pl-10 md:text-left'">
                 <div
-                  class="group relative bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700/50 hover:-translate-y-1 overflow-hidden"
-                  :class="item.borderHoverClass">
-                  <!-- Single Corner Circle - Different Colors -->
-                  <div class="absolute -top-8 -right-8 w-24 h-24 rounded-full opacity-25 dark:opacity-20 transition-opacity duration-300 group-hover:opacity-40 dark:group-hover:opacity-30"
-                    :class="item.circleClass"></div>
+                  class="group relative bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-1 overflow-hidden"
+                  :class="item.hoverBorderClass">
+
+                  <!-- Background Shape - Position based on card alignment -->
+                  <!-- Left-side cards (even index) have shape on left, Right-side cards (odd index) have shape on right -->
+                  <div class="absolute -bottom-6 w-20 h-20 rounded-full opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+                    :class="[index % 2 === 0 ? '-left-6' : '-right-6', item.bgColorLarge]"></div>
+                  <div class="absolute -bottom-3 w-12 h-12 rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    :class="[index % 2 === 0 ? '-left-3' : '-right-3', item.bgColorSmall]"></div>
 
                   <!-- Content -->
                   <div class="relative z-10">
                     <!-- Date Badge -->
                     <div
-                      class="inline-flex items-center gap-1.5 px-3 py-1 mb-2.5 bg-purple-50 dark:bg-purple-900/40 backdrop-blur-sm rounded-full border border-purple-200/50 dark:border-purple-700/50">
-                      <icon icon="ph:calendar-duotone" class="w-3 h-3 text-purple-600 dark:text-purple-400" />
-                      <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">{{ item.date }}</span>
+                      class="inline-flex items-center gap-1.5 px-3 py-1 mb-3 rounded-full"
+                      :class="item.badgeClass">
+                      <icon icon="ph:calendar-duotone" class="w-3.5 h-3.5" :class="item.iconClass" />
+                      <span class="text-xs font-semibold" :class="item.textClass">{{ item.date }}</span>
                     </div>
 
                     <!-- Title -->
                     <h3
-                      class="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1.5 leading-tight group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                      class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight transition-colors duration-300"
+                      :class="item.titleHoverClass">
                       {{ item.title }}
                     </h3>
 
                     <!-- Company -->
-                    <div class="flex items-center gap-1.5"
+                    <div class="flex items-center gap-2"
                       :class="index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'">
-                      <icon icon="ph:buildings-duotone" class="w-4 h-4 text-purple-500 dark:text-purple-400" />
-                      <p class="text-sm sm:text-base font-semibold text-purple-600 dark:text-purple-400">
+                      <icon icon="ph:buildings-duotone" class="w-4 h-4" :class="item.iconClass" />
+                      <p class="text-sm sm:text-base font-semibold" :class="item.companyClass">
                         {{ item.company }}
                       </p>
                     </div>
@@ -118,36 +124,79 @@ import { Icon } from '@iconify/vue';
 
 const backgroundItems = ref([
   {
-    date: 'December 06, 2023 – Continuing',
+    date: 'October 17, 2024 – Continuing',
     title: 'Software Engineer',
-    company: 'AT Limited',
+    company: 'ACI Limited',
     icon: 'ph:briefcase-duotone',
-    circleClass: 'bg-purple-400',
-    borderHoverClass: 'hover:border-purple-300 dark:hover:border-purple-500/50'
+    // Purple theme
+    bgColorLarge: 'bg-purple-100 dark:bg-purple-900/30',
+    bgColorSmall: 'bg-purple-200 dark:bg-purple-800/40',
+    hoverBorderClass: 'hover:border-purple-300 dark:hover:border-purple-500/50',
+    badgeClass: 'bg-purple-50 dark:bg-purple-900/40',
+    iconClass: 'text-purple-600 dark:text-purple-400',
+    textClass: 'text-purple-700 dark:text-purple-300',
+    titleHoverClass: 'group-hover:text-purple-600 dark:group-hover:text-purple-400',
+    companyClass: 'text-purple-600 dark:text-purple-400'
+  },
+  {
+    date: 'December 06, 2023 – October 10, 2024',
+    title: 'Frontend Developer',
+    company: 'Yuma Technology',
+    icon: 'ph:code-duotone',
+    // Sky/Blue theme
+    bgColorLarge: 'bg-sky-100 dark:bg-sky-900/30',
+    bgColorSmall: 'bg-sky-200 dark:bg-sky-800/40',
+    hoverBorderClass: 'hover:border-sky-300 dark:hover:border-sky-500/50',
+    badgeClass: 'bg-sky-50 dark:bg-sky-900/40',
+    iconClass: 'text-sky-600 dark:text-sky-400',
+    textClass: 'text-sky-700 dark:text-sky-300',
+    titleHoverClass: 'group-hover:text-sky-600 dark:group-hover:text-sky-400',
+    companyClass: 'text-sky-600 dark:text-sky-400'
   },
   {
     date: 'March 27, 2023 – November 30, 2023',
     title: 'Junior Software Engineer',
     company: 'Neutron Ltd',
-    icon: 'ph:code-duotone',
-    circleClass: 'bg-sky-400',
-    borderHoverClass: 'hover:border-sky-300 dark:hover:border-sky-500/50'
+    icon: 'ph:laptop-duotone',
+    // Rose/Pink theme
+    bgColorLarge: 'bg-rose-100 dark:bg-rose-900/30',
+    bgColorSmall: 'bg-rose-200 dark:bg-rose-800/40',
+    hoverBorderClass: 'hover:border-rose-300 dark:hover:border-rose-500/50',
+    badgeClass: 'bg-rose-50 dark:bg-rose-900/40',
+    iconClass: 'text-rose-600 dark:text-rose-400',
+    textClass: 'text-rose-700 dark:text-rose-300',
+    titleHoverClass: 'group-hover:text-rose-600 dark:group-hover:text-rose-400',
+    companyClass: 'text-rose-600 dark:text-rose-400'
   },
   {
     date: 'May 10, 2022 – March 8, 2023',
     title: 'Assistant Senior Officer',
     company: 'Walton Digi-Tech Industries Limited',
     icon: 'ph:user-gear-duotone',
-    circleClass: 'bg-amber-400',
-    borderHoverClass: 'hover:border-amber-300 dark:hover:border-amber-500/50'
+    // Amber/Orange theme
+    bgColorLarge: 'bg-amber-100 dark:bg-amber-900/30',
+    bgColorSmall: 'bg-amber-200 dark:bg-amber-800/40',
+    hoverBorderClass: 'hover:border-amber-300 dark:hover:border-amber-500/50',
+    badgeClass: 'bg-amber-50 dark:bg-amber-900/40',
+    iconClass: 'text-amber-600 dark:text-amber-400',
+    textClass: 'text-amber-700 dark:text-amber-300',
+    titleHoverClass: 'group-hover:text-amber-600 dark:group-hover:text-amber-400',
+    companyClass: 'text-amber-600 dark:text-amber-400'
   },
   {
     date: 'June 10, 2021 – December 10, 2021',
     title: 'Frontend Developer',
     company: 'Developer Experience Hub',
     icon: 'ph:devices-duotone',
-    circleClass: 'bg-emerald-400',
-    borderHoverClass: 'hover:border-emerald-300 dark:hover:border-emerald-500/50'
+    // Emerald/Green theme
+    bgColorLarge: 'bg-emerald-100 dark:bg-emerald-900/30',
+    bgColorSmall: 'bg-emerald-200 dark:bg-emerald-800/40',
+    hoverBorderClass: 'hover:border-emerald-300 dark:hover:border-emerald-500/50',
+    badgeClass: 'bg-emerald-50 dark:bg-emerald-900/40',
+    iconClass: 'text-emerald-600 dark:text-emerald-400',
+    textClass: 'text-emerald-700 dark:text-emerald-300',
+    titleHoverClass: 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400',
+    companyClass: 'text-emerald-600 dark:text-emerald-400'
   }
 ]);
 </script>
