@@ -1,7 +1,7 @@
 <template>
   <section id="about"
-    class="bg-gradient-to-br from-slate-50 via-gray-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900 py-16 md:py-20 px-4 overflow-hidden transition-colors duration-500">
-    <div class="max-w-7xl mx-auto">
+    class="bg-gradient-to-br from-slate-50 via-gray-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900 py-16 md:py-20 overflow-hidden transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Main Content Grid -->
       <div class="grid lg:grid-cols-2 gap-16 items-center">
 

@@ -27,7 +27,7 @@
 
     <!-- Hero Content -->
     <div id="home" class="relative z-10 min-h-screen flex items-center">
-      <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Left Content -->
           <div class="space-y-8 pt-20 md:pt-0">

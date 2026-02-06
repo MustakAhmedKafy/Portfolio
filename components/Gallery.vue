@@ -1,7 +1,7 @@
 <template>
   <section id="gallery"
-    class="bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950 transition-colors duration-500 py-16 md:py-20 px-4">
-    <div class="max-w-7xl mx-auto">
+    class="bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950 transition-colors duration-500 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header Section -->
       <div class="text-center mb-12 sm:mb-16 md:mb-20" data-aos="fade-up">
         <div

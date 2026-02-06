@@ -1,6 +1,6 @@
 <template>
   <section id="work"
-    class="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950/50 py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    class="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950/50 py-16 md:py-20 overflow-hidden">
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
       <div
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header with Creative Design -->
       <div class="text-center mb-12 sm:mb-16 md:mb-20" data-aos="fade-up">
         <div
