@@ -158,6 +158,7 @@ const socialLinks = [
 ]
 
 // Stats data
+// Stats data
 const stats = [
   {
     value: '3+',
