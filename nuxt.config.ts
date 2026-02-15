@@ -82,6 +82,9 @@ export default defineNuxtConfig({
           content: "https://mustakkafy.vercel.app/Mutsak.png",
         },
       ],
+      link: [
+        { rel: "canonical", href: "https://mustakkafy.vercel.app" },
+      ],
     },
   },
 });
